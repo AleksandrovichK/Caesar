@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/ControlButton/ClearButton.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/Frames/FunctionalFrame.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Frames/MainFrame.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/Frames/Slot.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/Main/Main.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/Panels/EditPanel.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/Panels/FreedmanPanel.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/Panels/FrequencyFunctionFrame.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/Panels/PermutationPanel.java" charset="windows-1251" />
+    <file url="PROJECT" charset="windows-1251" />
+  </component>
+</project>
