@@ -24,12 +24,8 @@ public class MainFrame extends JFrame {
     public MainFrame() {
         setting();
 
-        Slots slots = new Slots();
-        slots.setBounds(5, 290, 100, 405);
         this.textArea.setBounds(this.getBounds().width / 50, this.getBounds().height / 50, 94 * this.getBounds().width / 100, this.getBounds().height / 4);
-
         this.add(textArea);
-        this.add(slots);
     }
 
     private void setting() {
@@ -105,6 +101,10 @@ public class MainFrame extends JFrame {
 
             }
         });
+
+        Slots slots = new Slots(frequencyFunctionPanel, editPanel);
+        slots.setBounds(5, 290, 100, 405);
+        this.add(slots);
     }
 
     private void showPanel(int number) {

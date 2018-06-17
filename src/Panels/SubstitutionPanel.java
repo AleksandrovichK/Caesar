@@ -17,7 +17,6 @@ import Component.SubstitutionWindowLetter;
 import ControlButton.ClearButton;
 import ControlButton.RefreshButton;
 import ControlButton.ReplaceButton;
-import Frames.FunctionalFrame;
 import Frames.MainFrame;
 
 public class SubstitutionPanel extends JPanel {

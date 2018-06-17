@@ -2,52 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a353abaf-f71c-45ca-96bf-93287a6b3f9c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Constants/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Panels/FrequencyFunctionPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Component/GistogrammPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Component/GistogrammPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Component/Slot$Listener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Component/Slot.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Component/Slot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Component/Slots$Listener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Component/Slots.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Component/Slots.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Component/TextPanel$Listener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Component/TextPanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/ControlButton/ExitButton$Listener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/ControlButton/ExitButton.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/ControlButton/IconifiedButton$Listener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/ControlButton/IconifiedButton.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Frames/MainFrame$Listener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Frames/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Frames/MainFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Frames/Slot$Listener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Frames/Slot.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Frames/StartFrame.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Panels/EditPanel$Listener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Panels/EditPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Panels/EditPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Panels/FreedmanPanel$Listener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Panels/FreedmanPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Panels/FreedmanPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Panels/FrequencyFunctionFrame$Listener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Panels/FrequencyFunctionFrame.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Panels/PermutationPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Panels/PermutationPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Panels/substitutionPanel$Listener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Panels/substitutionPanel$MListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Panels/substitutionPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Panels/substitutionPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/GistogrammPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/GistogrammPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/Slot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Slot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/Slots.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Slots.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/TextPanel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ControlButton/ExitButton.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ControlButton/IconifiedButton.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frames/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/MainFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/Slot.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/StartFrame.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Panels/EditPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/EditPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Panels/FreedmanPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/FreedmanPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Panels/FrequencyFunctionFrame.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Panels/PermutationPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/PermutationPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Panels/substitutionPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/SubstitutionPanel.java" afterDir="false" />
     </list>
     <ignored path="Project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -81,11 +38,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainFrame.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainFrame.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Frames/MainFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
+            <state relative-caret-position="350">
+              <caret line="104" column="29" selection-start-line="104" selection-start-column="29" selection-end-line="104" selection-end-column="29" />
               <folding>
                 <element signature="class#2247:3025" />
                 <element signature="class#2846:3390" />
@@ -100,23 +57,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
+      <file leaf-file-name="Slots.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Component/Slots.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="255">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
               <folding>
-                <element signature="e#105#106#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GistogrammPanel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Component/GistogrammPanel.java">
+      <file leaf-file-name="Slot.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Component/Slot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="476">
+              <caret line="34" column="39" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -149,18 +109,18 @@
         <option value="$PROJECT_DIR$/src/Panels/substitutionPanel.java" />
         <option value="$PROJECT_DIR$/src/Frames/Slot.java" />
         <option value="$PROJECT_DIR$/src/Frames/StartFrame.java" />
-        <option value="$PROJECT_DIR$/src/Component/Slot.java" />
         <option value="$PROJECT_DIR$/src/Panels/EditPanel.java" />
         <option value="$PROJECT_DIR$/src/Panels/PermutationPanel.java" />
         <option value="$PROJECT_DIR$/src/Panels/SubstitutionPanel.java" />
         <option value="$PROJECT_DIR$/src/Main/Main.java" />
         <option value="$PROJECT_DIR$/src/Panels/FreedmanPanel.java" />
-        <option value="$PROJECT_DIR$/src/Component/Slots.java" />
         <option value="$PROJECT_DIR$/src/Constants/Constants.java" />
         <option value="$PROJECT_DIR$/src/Component/GistogrammPanel.java" />
         <option value="$PROJECT_DIR$/src/Panels/FrequencyFunctionFrame.java" />
         <option value="$PROJECT_DIR$/src/Panels/FrequencyFunctionPanel.java" />
+        <option value="$PROJECT_DIR$/src/Component/Slot.java" />
         <option value="$PROJECT_DIR$/src/Frames/MainFrame.java" />
+        <option value="$PROJECT_DIR$/src/Component/Slots.java" />
       </list>
     </option>
   </component>
@@ -406,12 +366,20 @@
       <workItem from="1524923310347" duration="608000" />
       <workItem from="1525123838930" duration="181000" />
       <workItem from="1525167591397" duration="294000" />
-      <workItem from="1529267187601" duration="11245000" />
+      <workItem from="1529267187601" duration="11874000" />
     </task>
+    <task id="LOCAL-00001" summary="Almost works">
+      <created>1529279068839</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1529279068839</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12328000" />
+    <option name="totallyTimeSpent" value="12957000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -468,12 +436,16 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Almost works" />
+    <option name="LAST_COMMIT_MESSAGE" value="Almost works" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Frames/MainFrame.java</url>
-          <line>67</line>
+          <line>63</line>
           <properties />
           <option name="timeStamp" value="70" />
         </line-breakpoint>
@@ -483,14 +455,8 @@
           <properties />
           <option name="timeStamp" value="71" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Frames/MainFrame.java</url>
-          <line>46</line>
-          <properties />
-          <option name="timeStamp" value="74" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="75" />
+      <option name="time" value="76" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -685,19 +651,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Component/Slot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="class#391:828" />
-            <element signature="e#734#735#0" expanded="true" />
-            <element signature="e#775#776#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ControlButton/IconifiedButton.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="395">
@@ -733,16 +686,6 @@
           <folding>
             <element signature="e#3226#3227#0" expanded="true" />
             <element signature="e#3279#3280#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Component/Slots.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -825,13 +768,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Component/GistogrammPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -842,10 +778,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Component/GistogrammPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-180">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Component/Slot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="34" column="39" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Frames/MainFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
+        <state relative-caret-position="350">
+          <caret line="104" column="29" selection-start-line="104" selection-start-column="29" selection-end-line="104" selection-end-column="29" />
           <folding>
             <element signature="class#2247:3025" />
             <element signature="class#2846:3390" />
@@ -855,6 +808,16 @@
             <element signature="e#3200#3201#0" expanded="true" />
             <element signature="e#3242#3243#0" expanded="true" />
             <element signature="e#3273#3274#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Component/Slots.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

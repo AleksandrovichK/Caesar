@@ -9,11 +9,14 @@ public class Slot extends JPanel {
     private Color up;
     private Color down;
     private String name;
+    private JPanel panel;
 
-    public Slot(String s) {
+    Slot(String s, JPanel pane) {
         name = s;
-        up = new Color(3, 15, 60);
-        down = new Color(3, 0, 37);
+        panel = pane;
+
+        down = new Color(3, 7, 35);
+        up = new Color(3, 0, 37);
         this.addMouseListener(new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -29,6 +32,7 @@ public class Slot extends JPanel {
             @Override
             public void mouseReleased(MouseEvent e) {
                 repaint();
+                panel.setVisible(true);
             }
 
             @Override
@@ -49,8 +53,7 @@ public class Slot extends JPanel {
         super.paintComponent(g);
         Graphics2D gg = (Graphics2D) g;
         gg.setPaint(new GradientPaint(0, 0, up, 0, this.getHeight() / 2, down));
-        gg.fillRect(0, 0, this.getWidth(), this.getHeight() / 2
-        );
+        gg.fillRect(0, 0, this.getWidth(), this.getHeight() / 2);
         gg.setPaint(new GradientPaint(0, this.getHeight() / 2, down, 0, this.getHeight(), up));
         gg.fillRect(0, this.getHeight() / 2, this.getWidth(), this.getHeight());
 
