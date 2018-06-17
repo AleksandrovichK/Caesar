@@ -8,8 +8,8 @@ import java.awt.Graphics2D;
 import javax.swing.JPanel;
 
 public class GistogrammPanel extends JPanel {
-	String[] info;
-	String[] data;
+	private String[] info;
+	private String[] data;
 
 	public GistogrammPanel(String[] s, String[] d) {
 		info = s;

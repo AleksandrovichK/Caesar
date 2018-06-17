@@ -1,125 +1,154 @@
 package Frames;
 
+import Component.Slots;
+import Constants.Constants;
+import Panels.EditPanel;
+import Panels.FreedmanPanel;
+import Panels.FrequencyFunctionPanel;
+import Panels.PermutationPanel;
+import Panels.SubstitutionPanel;
+
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-
-import Component.Slots;
-import Component.TextPanel;
-import ControlButton.ExitButton;
-import ControlButton.IconifiedButton;
-
 public class MainFrame extends JFrame {
-	private Slots slots;
-	private JPanel panel = new JPanel();
-	private TextPanel textPanel = new TextPanel();
-	IconifiedButton iconfieldButton = new IconifiedButton(this);
-	ExitButton exitButton = new ExitButton();
+    private JTextArea textArea = new JTextArea();
+    private JPanel frequencyFunctionPanel = new FrequencyFunctionPanel(getFullTextArea());
+    private JPanel editPanel = new EditPanel(this);
+    private JPanel freedmanPanel = new FreedmanPanel(this.getFullTextArea());
+    private JPanel substitutionPanel = new SubstitutionPanel(this);
+    private JPanel permutationPanel = new PermutationPanel(this);
 
-	public TextPanel getTextPanel() {
-		return textPanel;
-	}
-	public void setTextPanel(TextPanel textPanel) {
-		this.textPanel = textPanel;
-	}
+    public MainFrame() {
+        setting();
 
-	public MainFrame(String ss[], JPanel ff[]) {
-		setting();
-		slots = new Slots(this, ss, ff);
-		
-		panel.setBounds(110, 290, 850, 505);
-		slots.setBounds(5, 290, 100, 405);
-		textPanel.setBounds(110, 20, 585, 265);
-		exitButton.setBounds(679, 2, 16, 16);
-		iconfieldButton.setBounds(662, 2, 16, 16);
+        Slots slots = new Slots();
+        slots.setBounds(5, 290, 100, 405);
+        this.textArea.setBounds(this.getBounds().width / 50, this.getBounds().height / 50, 94 * this.getBounds().width / 100, this.getBounds().height / 4);
 
-		this.add(iconfieldButton);
-		this.add(exitButton);
-		this.add(panel);
-		this.add(textPanel);
-		this.add(slots);
-		getPanel().setLayout(new CardLayout());
+        this.add(textArea);
+        this.add(slots);
+    }
 
-	}
+    private void setting() {
+        this.setFont(new Font("Consolas", Font.BOLD, 18));
+        this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        this.setBounds(Constants.Sizes.MAINFRAME_INDENT_X, Constants.Sizes.MAINFRAME_INDENT_Y, Constants.Sizes.MAINFRAME_SIZE_X, Constants.Sizes.MAINFRAME_SIZE_Y);
+        this.setLayout(null);
 
-	private void setting() {
-		// TODO Auto-generated method stub
-		this.setFont(new Font("Consolas", Font.BOLD, 18));
-		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.setBounds(200, 5 * Toolkit.getDefaultToolkit().getScreenSize().height / 100, 900, 900);
-		this.setLayout(null);
-		this.addMouseListener(new Listener());
-		this.getContentPane().setBackground(Color.WHITE);
-		this.setUndecorated(true);
-	}
+        getContentPane().setBackground(Constants.MAIN_COLOR);
 
-	public JPanel getPanel() {
-		return panel;
-	}
+        this.add(frequencyFunctionPanel);
+        this.add(editPanel);
+        this.add(freedmanPanel);
+        this.add(substitutionPanel);
+        this.add(permutationPanel);
 
-	public void setPanel(JPanel panel) {
-		this.panel = panel;
-	}
+        toDevisibleAll();
 
-	public void paint(Graphics g) {
-		Graphics2D gg = (Graphics2D) this.getGraphics();
-		Color up = new Color(0, 31, 85);
-		Color down = new Color(3, 15, 37);
-		gg.setPaint(new Color(0, 0, 0, 0));
-		gg.fillRect(0, 0, this.getWidth(), this.getHeight());
+        frequencyFunctionPanel.setBounds(110, 290, 850, 505);
+        editPanel.setBounds(110, 290, 850, 505);
 
-		gg.setPaint(new GradientPaint(0, 0, up, 0, 285, down));
-		gg.fillRect(0, 0, this.getWidth(), this.getHeight());
-		gg.setPaint(Color.BLACK);
-		gg.drawRect(0, 0, this.getWidth() - 1, this.getHeight() - 1);
+        frequencyFunctionPanel.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
 
-		slots.repaint();
-		textPanel.repaint();
-		exitButton.repaint();
-		iconfieldButton.repaint();
-		panel.repaint();
+            }
 
-	}
+            @Override
+            public void mousePressed(MouseEvent e) {
 
-	boolean press=false;
-	int x,y;
-	public class Listener implements MouseListener {
+            }
 
-		@Override
-		public void mouseClicked(MouseEvent e) {
-			// TODO Auto-generated method stub
-			
-		}
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                toDevisibleAll();
+                showPanel(1);
+            }
 
-		@Override
-		public void mousePressed(MouseEvent e) {
-			// TODO Auto-generated method stub
-			press = true;
-			x=e.getX();
-			y=e.getY();
-		}
+            @Override
+            public void mouseEntered(MouseEvent e) {
 
-		@Override
-		public void mouseReleased(MouseEvent e) {
-			// TODO Auto-generated method stub
-			press =false;
-			setBounds(getBounds().x-(x-e.getX()),getBounds().y-(y-e.getY()),900,900);
-		}
+            }
 
-		@Override
-		public void mouseEntered(MouseEvent e) {
-			// TODO Auto-generated method stub
-			
-		}
+            @Override
+            public void mouseExited(MouseEvent e) {
 
-		@Override
-		public void mouseExited(MouseEvent e) {
-			// TODO Auto-generated method stub
-			
-		}
+            }
+        });
+        editPanel.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
 
-	}
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                toDevisibleAll();
+                showPanel(2);
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+
+            }
+        });
+    }
+
+    private void showPanel(int number) {
+        switch (number){
+            case 1: {
+                frequencyFunctionPanel.setVisible(true);
+                frequencyFunctionPanel.repaint();
+                break;
+            }
+            case 2: {
+                editPanel.setVisible(true);
+                editPanel.repaint();
+                break;
+            }
+            case 3: {
+                break;
+            }
+            case 4: {
+                break;
+            }
+            case 5: {
+                break;
+            }
+            default: throw new NullPointerException("Wrong panel number!");
+        }
+    }
+
+    public String getTextArea() {
+        return textArea.getText();
+    }
+
+    public void setTextArea(String text) {
+        this.textArea.setText(text);
+    }
+
+    public JTextArea getFullTextArea() {
+        return textArea;
+    }
+
+    private void toDevisibleAll() {
+        frequencyFunctionPanel.setVisible(false);
+        editPanel.setVisible(false);
+        freedmanPanel.setVisible(false);
+        substitutionPanel.setVisible(false);
+        permutationPanel.setVisible(false);
+    }
 }

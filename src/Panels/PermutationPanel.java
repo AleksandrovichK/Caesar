@@ -48,7 +48,7 @@ public class PermutationPanel extends JPanel {
 		keyInput.setFont(new Font("Consolas", Font.BOLD, 18));
 		keyInput.setForeground(Color.BLACK);
 
-		primaryText.setText(MText.getTextPanel().getMainText().getText());
+		primaryText.setText(MText.getTextArea());
 	}
 	public PermutationPanel(MainFrame mainText) throws HeadlessException {
 		MText = mainText;

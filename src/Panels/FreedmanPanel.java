@@ -1,20 +1,12 @@
 package Panels;
 
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.RadialGradientPaint;
-import java.awt.event.ComponentEvent;
-import java.awt.event.ComponentListener;
+import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.HashMap;
 import java.util.Map;
 
 import javax.swing.JButton;
-import javax.swing.JComponent;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
@@ -24,16 +16,11 @@ import Frames.MainFrame;
 
 public class FreedmanPanel extends JPanel {
 
-	private void addComponent(JComponent component, int x1, int x2, int x3, int x4) {
-		component.setBounds(x1, x2, x3, x4);
-		this.add(component);
-	};
-
 	private void settings() {
 		this.setLayout(null);
 	};
 
-	private MainFrame TextMain;
+	private JTextArea mainText;
 	private JButton toCount = new JButton("Посчитать индекс Фридмана");
 	private JButton toMutCount = new JButton("Посчитать индекс совпадения Фридмана");
 	JScrollPane pane1 = null;
@@ -81,33 +68,78 @@ public class FreedmanPanel extends JPanel {
 		toMutCount.repaint();
 	}
 
-	public FreedmanPanel(MainFrame MText) {
-		TextMain = MText;
+	public FreedmanPanel(JTextArea MText) {
+		mainText = MText;
 		settings();
 
-		// Background back = new Background("resources\\23bg_13.jpg");
+		this.add(inText).setBounds(0, 70, 585, 100);
+		this.add(toCount).setBounds(0, 2, 285, 20);
+		this.add(toMutCount).setBounds(300, 2, 285, 20);
 
-		addComponent(inText, 0, 70, 585, 100);
-		addComponent(toCount, 0, 2, 285, 20);
-		addComponent(toMutCount, 300, 2, 285, 20);
+		toCount.addMouseListener(new MouseListener() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
 
-		Listener listener = new Listener();
-		toCount.addMouseListener(listener);
-		toMutCount.addMouseListener(listener);
+			}
+
+			@Override
+			public void mousePressed(MouseEvent e) {
+
+			}
+
+			@Override
+			public void mouseReleased(MouseEvent e) {
+				toCountFreedman(mainText.getText());
+			}
+
+			@Override
+			public void mouseEntered(MouseEvent e) {
+
+			}
+
+			@Override
+			public void mouseExited(MouseEvent e) {
+
+			}
+		});
+		toMutCount.addMouseListener(new MouseListener() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+
+			}
+
+			@Override
+			public void mousePressed(MouseEvent e) {
+
+			}
+
+			@Override
+			public void mouseReleased(MouseEvent e) {
+				String a = inText.getText();
+				toCountMutFreedman(a);
+			}
+
+			@Override
+			public void mouseEntered(MouseEvent e) {
+
+			}
+
+			@Override
+			public void mouseExited(MouseEvent e) {
+
+			}
+		});
+
 		toPrintFreedmanTable();
 		toPrintEngTable();
 		toPrintRusTable();
-		toCountFreedman();
 		this.updateUI();
 	}
 
-	private void toCountFreedman() {
-
-		String text = TextMain.getTextPanel().getMainText().getText();
-
+	private void toCountFreedman(String text) {
 		int m = text.length();
 
-		Map<Character, Integer> Frequency = new HashMap<Character, Integer>();
+		Map<Character, Integer> Frequency = new HashMap<>();
 
 		text = text.toUpperCase();
 
@@ -140,7 +172,7 @@ public class FreedmanPanel extends JPanel {
 
 	private void toCountMutFreedman(String text2) {
 
-		String text = TextMain.getTextPanel().getMainText().getText();
+		String text = mainText.getText();
 
 		Map<Character, Integer> Frequency = new HashMap<Character, Integer>();
 		Map<Character, Integer> Frequency2 = new HashMap<Character, Integer>();
@@ -204,7 +236,7 @@ public class FreedmanPanel extends JPanel {
 
 		pane3 = new JScrollPane(new JTable(data, columns));
 
-		addComponent(pane3, 0, 200, 585, 39);
+		this.add(pane3).setBounds(0, 200, 585, 39);
 	}
 
 	private void toPrintEngTable() {
@@ -229,7 +261,7 @@ public class FreedmanPanel extends JPanel {
 		JTable table = new JTable(data, columns);
 		table.setFont(new Font("Times New Roman", Font.PLAIN, 12));
 		pane2 = new JScrollPane(table);
-		addComponent(pane2, 0, 290, 585, 39);
+		this.add(pane2).setBounds(0, 290, 585, 39);
 	}
 
 	private void toPrintRusTable() {
@@ -259,42 +291,6 @@ public class FreedmanPanel extends JPanel {
 		table.setFont(new Font("Times New Roman", Font.PLAIN, 10));
 		pane1 = new JScrollPane(table);
 
-		addComponent(pane1, 0, 360, 585, 39);
+		this.add(pane1).setBounds(0, 360, 585, 39);
 	}
-
-	public class Listener implements MouseListener {
-		@Override
-		public void mouseClicked(MouseEvent e) {
-
-		}
-
-		@Override
-		public void mousePressed(MouseEvent e) {
-
-		}
-
-		@Override
-		public void mouseReleased(MouseEvent e) {
-			JButton b = new JButton();
-			b = (JButton) e.getSource();
-			if (b == toCount) {
-				toCountFreedman();
-			}
-			if (b == toMutCount) {
-				String a = inText.getText();
-				toCountMutFreedman(a);
-			}
-		}
-
-		@Override
-		public void mouseEntered(MouseEvent e) {
-
-		}
-
-		@Override
-		public void mouseExited(MouseEvent e) {
-		}
-
-	}
-
 }
