@@ -46,6 +46,9 @@ public class MainFrame extends JFrame {
 
         frequencyFunctionPanel.setBounds(110, 290, 850, 505);
         editPanel.setBounds(110, 290, 850, 505);
+        freedmanPanel.setBounds(110, 290, 850, 505);
+        substitutionPanel.setBounds(110, 290, 850, 505);
+        permutationPanel.setBounds(110, 290, 850, 505);
 
         frequencyFunctionPanel.addMouseListener(new MouseListener() {
             @Override
@@ -102,7 +105,7 @@ public class MainFrame extends JFrame {
             }
         });
 
-        Slots slots = new Slots(frequencyFunctionPanel, editPanel);
+        Slots slots = new Slots(frequencyFunctionPanel, editPanel, freedmanPanel, substitutionPanel, permutationPanel);
         slots.setBounds(5, 290, 100, 405);
         this.add(slots);
     }
@@ -120,12 +123,18 @@ public class MainFrame extends JFrame {
                 break;
             }
             case 3: {
+                freedmanPanel.setVisible(true);
+                freedmanPanel.repaint();
                 break;
             }
             case 4: {
+                substitutionPanel.setVisible(true);
+                substitutionPanel.repaint();
                 break;
             }
             case 5: {
+                permutationPanel.setVisible(true);
+                permutationPanel.repaint();
                 break;
             }
             default: throw new NullPointerException("Wrong panel number!");

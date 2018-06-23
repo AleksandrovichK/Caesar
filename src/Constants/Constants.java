@@ -9,6 +9,8 @@ public interface Constants {
     String FUNCTIONS_SLOT = "Functions";
     String FREQUENCY_SLOT = "Frequency";
     Color MAIN_COLOR = new Color(32, 32, 32);
+    Color SLOT_UP_COLOR = new Color(3, 0, 37);
+    Color SLOT_DOWN_COLOR =  new Color(3, 7, 35);
 
     interface Sizes {
         int MAINFRAME_INDENT_X = 25 * Toolkit.getDefaultToolkit().getScreenSize().width / 100;

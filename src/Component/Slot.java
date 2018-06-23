@@ -1,23 +1,23 @@
 package Component;
 
+import Constants.Constants;
+
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 
 public class Slot extends JPanel {
-    private Color up;
-    private Color down;
+    private Color up = Constants.SLOT_UP_COLOR;
+    private Color down = Constants.SLOT_DOWN_COLOR;
     private String name;
+
     private JPanel panel;
 
     Slot(String s, JPanel pane) {
         name = s;
         panel = pane;
+        panel.setVisible(false);
 
-        down = new Color(3, 7, 35);
-        up = new Color(3, 0, 37);
-        this.addMouseListener(new MouseListener() {
+        /*this.addMouseListener(new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
 
@@ -31,8 +31,9 @@ public class Slot extends JPanel {
 
             @Override
             public void mouseReleased(MouseEvent e) {
+                isVisible = !isVisible;
+                panel.setVisible(isVisible);
                 repaint();
-                panel.setVisible(true);
             }
 
             @Override
@@ -46,7 +47,7 @@ public class Slot extends JPanel {
                 down = new Color(3, 0, 37);
                 repaint();
             }
-        });
+        });*/
     }
 
     public void paintComponent(Graphics g) {
@@ -67,5 +68,13 @@ public class Slot extends JPanel {
         gg.setPaint(Color.BLACK);
         gg.drawLine(this.getWidth() - 1, 0, this.getWidth() - 1, this.getHeight());
         gg.drawLine(0, 0, 0, this.getHeight());
+    }
+
+    boolean isPanelVisible() {
+        return panel.isVisible();
+    }
+
+    void setPanelVisible(boolean visible) {
+        panel.setVisible(visible);
     }
 }
