@@ -5,7 +5,6 @@ import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.HeadlessException;
-import java.awt.RadialGradientPaint;
 import java.awt.event.*;
 
 import javax.swing.JButton;
@@ -14,14 +13,15 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-import ControlButton.KeyButton;
+import Buttons.JBlackButton;
+import Buttons.KeyButton;
 import Main.MainFrame;
 
 public class PermutationPanel extends JPanel {
 
 
 	private JTextArea primaryText = new JTextArea();
-	private JButton butChange = new JButton("Поменять");
+	private JBlackButton butChange = new JBlackButton("Поменять");
 	private JTextField labelOld = new JTextField();
 	private JTextField labelNew = new JTextField();
 	private JTextField keyInput = new JTextField("");

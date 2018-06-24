@@ -11,9 +11,9 @@ import java.util.Map;
 import javax.swing.*;
 
 import Component.SubstitutionWindowLetter;
-import ControlButton.ClearButton;
-import ControlButton.RefreshButton;
-import ControlButton.ReplaceButton;
+import Buttons.ClearButton;
+import Buttons.RefreshButton;
+import Buttons.ReplaceButton;
 import Main.MainFrame;
 
 public class SubstitutionPanel extends JPanel {

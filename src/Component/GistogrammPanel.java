@@ -17,7 +17,7 @@ public class GistogrammPanel extends JPanel {
 
     public void paint(Graphics g) {
         Graphics2D gg = (Graphics2D) g;
-        gg.setPaint(Constants.MAIN_TEXTPANEL_COLOR);
+        gg.setPaint(Constants.Colors.MAIN_TEXTPANEL_COLOR);
         gg.fillRect(0, 0, this.getWidth(), this.getHeight());
 
         gg.setPaint(Color.GRAY);
@@ -26,7 +26,7 @@ public class GistogrammPanel extends JPanel {
         int n = info.length;
         double scale = 0.8 / Double.parseDouble(data[0]);
         for (int i = 0; i < n; i++) {
-            gg.setPaint(Constants.GISTOGRAMM_COLOR);
+            gg.setPaint(Constants.Colors.GISTOGRAMM_COLOR);
             gg.fillRect(i * this.getWidth() / n + 1,
                     (int) (this.getHeight() - Double.parseDouble(data[i]) * scale * this.getHeight()) -3,
                     this.getWidth() / n - 3,
@@ -41,6 +41,6 @@ public class GistogrammPanel extends JPanel {
             gg.setPaint(Color.WHITE);
             gg.drawString(info[i], this.getWidth() * (2 * i + 1) / (2 * n) - 4, this.getHeight() - 6);
         }
-        gg.setPaint(Constants.MAIN_COLOR);
+        gg.setPaint(Constants.Colors.MAIN_COLOR);
     }
 }

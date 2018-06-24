@@ -8,6 +8,7 @@ import java.util.Map;
 
 import javax.swing.*;
 
+import Buttons.JBlackButton;
 import Component.GistogrammPanel;
 import Constants.Constants;
 
@@ -19,13 +20,13 @@ public class FrequencyFunctionPanel extends JPanel {
         this.setLayout(null);
 
         mainText = textArea;
-        setBackground(Constants.MAIN_COLOR);
+        setBackground(Constants.Colors.MAIN_COLOR);
 
-        JButton countButton = new JButton(Constants.Buttons.BUTTON_STATISTICS);
-        countButton.setBackground(Constants.MAIN_TEXTPANEL_COLOR);
+        JBlackButton countButton = new JBlackButton(Constants.Buttons.BUTTON_STATISTICS);
+        countButton.setBackground(Constants.Colors.MAIN_TEXTPANEL_COLOR);
         countButton.setForeground(Color.WHITE);
-        countButton.setFont(new Font("Arial", Font.BOLD, 22));
-        add(countButton).setBounds(Constants.Sizes.STATISTICS_BUTTON_BOUNDS);
+        countButton.setFont(Constants.Fonts.BUTTONS_FONT);
+        add(countButton).setBounds(Constants.Sizes.BUTTON_STATISTICS_BOUNDS);
         countButton.addMouseListener(new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {

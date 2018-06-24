@@ -1,6 +1,4 @@
-package ControlButton;
-
-import javax.swing.JPanel;
+package Buttons;
 
 import java.awt.Color;
 import java.awt.GradientPaint;
@@ -9,20 +7,19 @@ import java.awt.Graphics2D;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-import ControlButton.RefreshButton.Listener;
+import javax.swing.JPanel;
 
-public class ReplaceButton extends JPanel{
+public class ClearButton extends JPanel {
 	Color up;
 	Color down;
 
-	public ReplaceButton() {
+	public ClearButton() {
 
 		down = new Color(0, 31, 85);
 		up = new Color(0, 0, 0);
 
 		this.addMouseListener(new Listener());
 	}
-	
 
 	public void paint(Graphics g) {
 		Graphics2D gg = (Graphics2D) g;
@@ -41,13 +38,11 @@ public class ReplaceButton extends JPanel{
 		int x=this.getWidth();
 		int y=this.getHeight();
 		gg.setPaint(Color.WHITE);
-		gg.drawLine(35*x/100, 20*y/100, 35*x/100, 80*y/100);
-		gg.drawLine(65*x/100, 20*y/100, 65*x/100, 80*y/100);
-		gg.drawLine(35*x/100, 20*y/100, 35*x/100-2, 20*y/100+2);
-		gg.drawLine(35*x/100, 20*y/100, 35*x/100+2, 20*y/100+2);
-		gg.drawLine(65*x/100-2, 80*y/100-2, 65*x/100, 80*y/100);
-		gg.drawLine(65*x/100+2, 80*y/100-2, 65*x/100, 80*y/100);
-		
+		gg.drawRect(30*x/100, 30*y/100, 40*x/100, 60*y/100);
+		gg.drawRect(30*x/100, 20*y/100, 40*x/100, 10*y/100);
+		gg.drawLine(40*x/100, 40*y/100, 40*x/100, 80*y/100);
+		gg.drawLine(50*x/100, 40*y/100, 50*x/100, 80*y/100);
+		gg.drawLine(60*x/100, 40*y/100, 60*x/100, 80*y/100);
 	}
 
 	public class Listener implements MouseListener {

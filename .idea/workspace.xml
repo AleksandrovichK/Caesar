@@ -1,45 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a353abaf-f71c-45ca-96bf-93287a6b3f9c" name="Default" comment="Dat shit works fucking better!">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/bulbum.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Component/images/Frequency.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Component/images/Functions.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Component/images/Permutations.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Component/images/Substitutions.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Component/images/The Friedman Index.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main/MainFrame.java" afterDir="false" />
+    <list default="true" id="a353abaf-f71c-45ca-96bf-93287a6b3f9c" name="Default" comment="Frequencies fixed full">
+      <change afterPath="$PROJECT_DIR$/src/Buttons/JBlackButton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Buttons/JBlackField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/bulbum.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/bulbum.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Component/GistogrammPanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Component/Slot.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Component/Slots.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Component/SubstitutionWindowLetter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/ControlButton/ClearButton$Listener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/ControlButton/ClearButton.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/ControlButton/KeyButton$Listener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/ControlButton/KeyButton.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/ControlButton/RefreshButton$Listener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/ControlButton/RefreshButton.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/ControlButton/ReplaceButton$Listener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/ControlButton/ReplaceButton.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Frames/MainFrame.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Main/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Panels/EditPanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Panels/FreedmanPanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Panels/PermutationPanel$Listener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Panels/PermutationPanel$Listener2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Panels/PermutationPanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Panels/substitutionPanel.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/GistogrammPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/GistogrammPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/Slot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Slot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/Slots.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Slots.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Constants/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constants/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ControlButton/KeyButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ControlButton/KeyButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/MainFrame.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ControlButton/ClearButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Buttons/ClearButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ControlButton/KeyButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Buttons/KeyButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ControlButton/RefreshButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Buttons/RefreshButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ControlButton/ReplaceButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Buttons/ReplaceButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/MainFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Panels/EditPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/EditPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Panels/FreedmanPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/FreedmanPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Panels/FrequencyFunctionPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/FrequencyFunctionPanel.java" afterDir="false" />
@@ -78,31 +54,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FrequencyFunctionPanel.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Panels/FrequencyFunctionPanel.java">
+      <file leaf-file-name="EditPanel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Panels/EditPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="55" column="50" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="50" />
+            <state relative-caret-position="360">
+              <caret line="125" column="50" selection-start-line="125" selection-start-column="50" selection-end-line="125" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#FrequencyFunctionPanel#0;class#FrequencyFunctionPanel#0" />
-                <element signature="class#788:1311" />
-                <element signature="e#1119#1120#0" expanded="true" />
-                <element signature="e#1183#1184#0" expanded="true" />
-                <element signature="method#toBuildFrequencyGistogrammPane#0;class#FrequencyFunctionPanel#0" />
+                <element signature="class#553:1101" />
+                <element signature="class#1231:1779" />
+                <element signature="method#divideColumnFunction#0;class#EditPanel#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Constants/Constants.java">
+      <file leaf-file-name="JBlackField.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Buttons/JBlackField.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-              <folding>
-                <element signature="class#Buttons#0;class#Constants#0" />
-              </folding>
+            <state relative-caret-position="309">
+              <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -112,8 +83,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -135,19 +106,22 @@
         <option value="$PROJECT_DIR$/src/Panels/substitutionPanel.java" />
         <option value="$PROJECT_DIR$/src/Frames/Slot.java" />
         <option value="$PROJECT_DIR$/src/Frames/StartFrame.java" />
-        <option value="$PROJECT_DIR$/src/Panels/EditPanel.java" />
         <option value="$PROJECT_DIR$/src/Panels/FrequencyFunctionFrame.java" />
         <option value="$PROJECT_DIR$/src/Frames/MainFrame.java" />
         <option value="$PROJECT_DIR$/src/Main/Main.java" />
-        <option value="$PROJECT_DIR$/src/Panels/PermutationPanel.java" />
-        <option value="$PROJECT_DIR$/src/Component/Slots.java" />
-        <option value="$PROJECT_DIR$/src/Panels/FreedmanPanel.java" />
-        <option value="$PROJECT_DIR$/src/Component/Slot.java" />
         <option value="$PROJECT_DIR$/src/Panels/SubstitutionPanel.java" />
+        <option value="$PROJECT_DIR$/src/Component/GistogrammPanel.java" />
+        <option value="$PROJECT_DIR$/src/Component/Slot.java" />
+        <option value="$PROJECT_DIR$/src/Component/Slots.java" />
+        <option value="$PROJECT_DIR$/src/Buttons/BlackButton.java" />
+        <option value="$PROJECT_DIR$/src/Panels/FreedmanPanel.java" />
+        <option value="$PROJECT_DIR$/src/Panels/PermutationPanel.java" />
+        <option value="$PROJECT_DIR$/src/Panels/FrequencyFunctionPanel.java" />
         <option value="$PROJECT_DIR$/src/Main/MainFrame.java" />
         <option value="$PROJECT_DIR$/src/Constants/Constants.java" />
-        <option value="$PROJECT_DIR$/src/Panels/FrequencyFunctionPanel.java" />
-        <option value="$PROJECT_DIR$/src/Component/GistogrammPanel.java" />
+        <option value="$PROJECT_DIR$/src/Buttons/BlackField.java" />
+        <option value="$PROJECT_DIR$/src/Panels/EditPanel.java" />
+        <option value="$PROJECT_DIR$/src/Buttons/JBlackField.java" />
       </list>
     </option>
   </component>
@@ -196,6 +170,12 @@
               <item name="Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="Caesar" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Buttons" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Caesar" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Component" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -203,12 +183,6 @@
               <item name="Caesar" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Constants" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Caesar" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ControlButton" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Project" type="b2602c69:ProjectViewProjectNode" />
@@ -240,15 +214,16 @@
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Programs\IntelliJ IDEA Projects\Programmes\Caesar\src\Component\images" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Buttons" />
+      <recent name="Frames" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Programs\IntelliJ IDEA Projects\Programmes\Caesar\src\Component\images" />
       <recent name="E:\Programs\IntelliJ IDEA Projects\Programmes\Caesar\src\Component" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="Frames" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Programs\IntelliJ IDEA Projects\Programmes\Caesar\src\Component\images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -397,7 +372,7 @@
       <workItem from="1529267187601" duration="12177000" />
       <workItem from="1529774660938" duration="60000" />
       <workItem from="1529774870354" duration="15302000" />
-      <workItem from="1529862811247" duration="7098000" />
+      <workItem from="1529862811247" duration="12324000" />
     </task>
     <task id="LOCAL-00001" summary="Almost works">
       <created>1529279068839</created>
@@ -420,14 +395,22 @@
       <option name="project" value="LOCAL" />
       <updated>1529777615292</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Frequencies fixed full">
+      <created>1529870075623</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1529870075623</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35720000" />
+    <option name="totallyTimeSpent" value="40946000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="7" />
@@ -439,11 +422,11 @@
       <window_info anchor="right" id="Maven Projects" order="11" weight="0.32969153" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.26287264" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.26287264" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info id="Capture Tool" order="4" />
       <window_info anchor="right" id="Designer" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15616967" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15616967" />
       <window_info anchor="right" id="Database" order="10" weight="0.32969153" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -484,11 +467,12 @@
     <MESSAGE value="Almost works" />
     <MESSAGE value="C'mon!" />
     <MESSAGE value="Dat shit works fucking better!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dat shit works fucking better!" />
+    <MESSAGE value="Frequencies fixed full" />
+    <option name="LAST_COMMIT_MESSAGE" value="Frequencies fixed full" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="89" />
+      <option name="time" value="91" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -496,21 +480,7 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Panels/FreedmanPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="87" column="70" selection-start-line="87" selection-start-column="70" selection-end-line="87" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="22" column="49" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ControlButton/ClearButton.java">
+    <entry file="file://$PROJECT_DIR$/src/Buttons/ClearButton.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret line="28" column="87" selection-start-line="28" selection-start-column="87" selection-end-line="28" selection-end-column="87" />
@@ -883,26 +853,6 @@
         <state relative-caret-position="-663" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Component/Slot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Component/Slots.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="143" column="26" selection-start-line="143" selection-start-column="26" selection-end-line="143" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Component/SubstitutionWindowLetter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -918,84 +868,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ControlButton/ClearButton.java">
+    <entry file="file://$PROJECT_DIR$/src/Buttons/KeyButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Panels/SubstitutionPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Panels/PermutationPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="228" column="39" selection-start-line="228" selection-start-column="39" selection-end-line="228" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Panels/EditPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#EditPanel#0;class#EditPanel#0" />
-            <element signature="method#transposeFunction#0;class#EditPanel#0" />
-            <element signature="method#deleteWordFunction#0;class#EditPanel#0" />
-            <element signature="method#checkSymb#0;class#EditPanel#0" />
-            <element signature="method#divideColumnFunction#0;class#EditPanel#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ControlButton/KeyButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
+        <state relative-caret-position="-799">
           <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ControlButton/RefreshButton.java">
+    <entry file="file://$PROJECT_DIR$/src/Buttons/RefreshButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
+        <state relative-caret-position="-374">
           <caret line="48" column="51" selection-start-line="48" selection-start-column="51" selection-end-line="48" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ControlButton/ReplaceButton.java">
+    <entry file="file://$PROJECT_DIR$/src/Buttons/ReplaceButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
+        <state relative-caret-position="-340">
           <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Panels/FreedmanPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="27" column="24" lean-forward="true" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
-          <folding>
-            <element signature="e#249#250#0" expanded="true" />
-            <element signature="e#276#277#0" expanded="true" />
-            <element signature="method#toCountFreedman#0;class#FreedmanPanel#0" />
-            <element signature="method#toCountMutFreedman#0;class#FreedmanPanel#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/MainFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="38" column="69" lean-forward="true" selection-start-line="38" selection-start-column="69" selection-end-line="38" selection-end-column="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#toDevisibleAll#0;class#MainFrame#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1009,40 +899,134 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Constants/Constants.java">
+    <entry file="file://$PROJECT_DIR$/src/Component/GistogrammPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+        <state relative-caret-position="401">
+          <caret line="35" column="43" lean-forward="true" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
           <folding>
-            <element signature="class#Buttons#0;class#Constants#0" />
+            <element signature="imports" expanded="true" />
+            <element signature="method#GistogrammPanel#0;class#GistogrammPanel#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Component/GistogrammPanel.java">
+    <entry file="file://$PROJECT_DIR$/src/Panels/PermutationPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        <state relative-caret-position="136">
+          <caret line="23" column="51" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Panels/FreedmanPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="20" column="52" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
+          <folding>
+            <element signature="e#249#250#0" expanded="true" />
+            <element signature="e#276#277#0" expanded="true" />
+            <element signature="method#toCountFreedman#0;class#FreedmanPanel#0" />
+            <element signature="method#toCountMutFreedman#0;class#FreedmanPanel#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Component/Slot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="28" column="40" lean-forward="true" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#GistogrammPanel#0;class#GistogrammPanel#0" />
-            <element signature="method#paint#0;class#GistogrammPanel#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/MainFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="32" column="47" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#toDevisibleAll#0;class#MainFrame#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Component/Slots.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="18" lean-forward="true" selection-start-column="18" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Panels/FrequencyFunctionPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="55" column="50" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="50" />
+        <state relative-caret-position="170">
+          <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#FrequencyFunctionPanel#0;class#FrequencyFunctionPanel#0" />
-            <element signature="class#788:1311" />
-            <element signature="e#1119#1120#0" expanded="true" />
-            <element signature="e#1183#1184#0" expanded="true" />
             <element signature="method#toBuildFrequencyGistogrammPane#0;class#FrequencyFunctionPanel#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Panels/SubstitutionPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Constants/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="58" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Buttons/JBlackButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#BlackButton#0;class#BlackButton#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Buttons/ClearButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Panels/EditPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="125" column="50" selection-start-line="125" selection-start-column="50" selection-end-line="125" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="class#553:1101" />
+            <element signature="class#1231:1779" />
+            <element signature="method#divideColumnFunction#0;class#EditPanel#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Buttons/JBlackField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
         </state>
       </provider>
     </entry>

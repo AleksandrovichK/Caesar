@@ -2,11 +2,15 @@
   <dictionary name="bulbum">
     <words>
       <w>consolas</w>
+      <w>dividecolumn</w>
+      <w>downcase</w>
       <w>gistogramm</w>
+      <w>maintext</w>
       <w>maintextpanel</w>
       <w>operationpanel</w>
       <w>qwer</w>
       <w>textpanel</w>
+      <w>upcase</w>
     </words>
   </dictionary>
 </component>

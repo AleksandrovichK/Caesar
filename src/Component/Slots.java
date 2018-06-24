@@ -11,7 +11,7 @@ public class Slots extends JPanel {
     private Slot[] slots;
 
     public Slots(JPanel frequencyFunctionPanel, JPanel editPanel, JPanel freedmanPanel, JPanel substitutionPanel, JPanel permutationPanel) {
-        String[] names = { Constants.FREQUENCY_SLOT, Constants.FUNCTIONS_SLOT, Constants.FRIEDMAN_INDEX_SLOT, Constants.SUBSTITUTIONS_SLOT, Constants.PERMUTATIONS_SLOT };
+        String[] names = { Constants.Slots.FREQUENCY_SLOT, Constants.Slots.FUNCTIONS_SLOT, Constants.Slots.FRIEDMAN_INDEX_SLOT, Constants.Slots.SUBSTITUTIONS_SLOT, Constants.Slots.PERMUTATIONS_SLOT };
         this.slots = new Slot[names.length];
 
         slots[0] = new Slot(names[0], frequencyFunctionPanel);

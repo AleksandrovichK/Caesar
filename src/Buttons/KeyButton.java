@@ -1,4 +1,4 @@
-package ControlButton;
+package Buttons;
 
 import java.awt.Color;
 import java.awt.GradientPaint;

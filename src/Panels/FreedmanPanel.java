@@ -8,6 +8,8 @@ import java.util.Map;
 
 import javax.swing.*;
 
+import Buttons.JBlackButton;
+
 public class FreedmanPanel extends JPanel {
 
 	private void settings() {
@@ -15,8 +17,8 @@ public class FreedmanPanel extends JPanel {
 	}
 
 	private JTextArea mainText;
-	private JButton toCount = new JButton("Посчитать индекс Фридмана");
-	private JButton toMutCount = new JButton("Посчитать индекс совпадения Фридмана");
+	private JBlackButton toCount = new JBlackButton("Посчитать индекс Фридмана");
+	private JBlackButton toMutCount = new JBlackButton("Посчитать индекс совпадения Фридмана");
 	private JScrollPane pane1 = null;
 	private JScrollPane pane2 = null;
 	private JScrollPane pane3 = null;
