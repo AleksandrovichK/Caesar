@@ -1,13 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a353abaf-f71c-45ca-96bf-93287a6b3f9c" name="Default" comment="">
+    <list default="true" id="a353abaf-f71c-45ca-96bf-93287a6b3f9c" name="Default" comment="Dat shit works fucking better!">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/bulbum.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Component/images/Frequency.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Component/images/Functions.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Component/images/Permutations.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Component/images/Substitutions.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Component/images/The Friedman Index.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main/MainFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Component/GistogrammPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Component/Slot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Component/Slots.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Component/SubstitutionWindowLetter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/ControlButton/ClearButton$Listener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/ControlButton/ClearButton.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/ControlButton/KeyButton$Listener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/ControlButton/KeyButton.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/ControlButton/RefreshButton$Listener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/ControlButton/RefreshButton.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/ControlButton/ReplaceButton$Listener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/ControlButton/ReplaceButton.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Frames/MainFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Main/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Panels/EditPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Panels/FreedmanPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Panels/PermutationPanel$Listener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Panels/PermutationPanel$Listener2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Panels/PermutationPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Panels/substitutionPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/GistogrammPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/GistogrammPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/Slot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Slot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/Slots.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Slots.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Constants/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constants/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/MainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ControlButton/KeyButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ControlButton/KeyButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/MainFrame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Panels/EditPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/EditPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Panels/FreedmanPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/FreedmanPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Panels/FrequencyFunctionPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/FrequencyFunctionPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Panels/PermutationPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/PermutationPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Panels/SubstitutionPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/SubstitutionPanel.java" afterDir="false" />
     </list>
     <ignored path="Project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,53 +78,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainFrame.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Frames/MainFrame.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-327">
-              <caret line="18" column="38" lean-forward="true" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
-              <folding>
-                <element signature="class#1807:2351" />
-                <element signature="class#2393:2937" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FrequencyFunctionPanel.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FrequencyFunctionPanel.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Panels/FrequencyFunctionPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+            <state relative-caret-position="323">
+              <caret line="55" column="50" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="50" />
               <folding>
-                <element signature="class#707:1230" />
+                <element signature="imports" expanded="true" />
+                <element signature="method#FrequencyFunctionPanel#0;class#FrequencyFunctionPanel#0" />
+                <element signature="class#788:1311" />
+                <element signature="e#1119#1120#0" expanded="true" />
+                <element signature="e#1183#1184#0" expanded="true" />
+                <element signature="method#toBuildFrequencyGistogrammPane#0;class#FrequencyFunctionPanel#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Slots.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Component/Slots.java">
+      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Constants/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1">
-              <caret line="138" column="45" selection-start-line="138" selection-start-column="45" selection-end-line="138" selection-end-column="45" />
+            <state relative-caret-position="473">
+              <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
               <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Slot.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Component/Slot.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="72" column="37" lean-forward="true" selection-start-line="72" selection-start-column="37" selection-end-line="72" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2323#2324#0" expanded="true" />
-                <element signature="e#2384#2385#0" expanded="true" />
-                <element signature="e#2427#2428#0" expanded="true" />
+                <element signature="class#Buttons#0;class#Constants#0" />
               </folding>
             </state>
           </provider>
@@ -122,17 +136,18 @@
         <option value="$PROJECT_DIR$/src/Frames/Slot.java" />
         <option value="$PROJECT_DIR$/src/Frames/StartFrame.java" />
         <option value="$PROJECT_DIR$/src/Panels/EditPanel.java" />
-        <option value="$PROJECT_DIR$/src/Panels/PermutationPanel.java" />
-        <option value="$PROJECT_DIR$/src/Main/Main.java" />
-        <option value="$PROJECT_DIR$/src/Panels/FreedmanPanel.java" />
-        <option value="$PROJECT_DIR$/src/Component/GistogrammPanel.java" />
         <option value="$PROJECT_DIR$/src/Panels/FrequencyFunctionFrame.java" />
-        <option value="$PROJECT_DIR$/src/Panels/FrequencyFunctionPanel.java" />
-        <option value="$PROJECT_DIR$/src/Panels/SubstitutionPanel.java" />
         <option value="$PROJECT_DIR$/src/Frames/MainFrame.java" />
-        <option value="$PROJECT_DIR$/src/Constants/Constants.java" />
-        <option value="$PROJECT_DIR$/src/Component/Slot.java" />
+        <option value="$PROJECT_DIR$/src/Main/Main.java" />
+        <option value="$PROJECT_DIR$/src/Panels/PermutationPanel.java" />
         <option value="$PROJECT_DIR$/src/Component/Slots.java" />
+        <option value="$PROJECT_DIR$/src/Panels/FreedmanPanel.java" />
+        <option value="$PROJECT_DIR$/src/Component/Slot.java" />
+        <option value="$PROJECT_DIR$/src/Panels/SubstitutionPanel.java" />
+        <option value="$PROJECT_DIR$/src/Main/MainFrame.java" />
+        <option value="$PROJECT_DIR$/src/Constants/Constants.java" />
+        <option value="$PROJECT_DIR$/src/Panels/FrequencyFunctionPanel.java" />
+        <option value="$PROJECT_DIR$/src/Component/GistogrammPanel.java" />
       </list>
     </option>
   </component>
@@ -163,9 +178,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -200,12 +214,6 @@
               <item name="Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="Caesar" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Frames" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Caesar" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -218,6 +226,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -228,11 +237,18 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Programs\IntelliJ IDEA Projects\Programmes\Caesar\src\Component\images" />
+      <recent name="E:\Programs\IntelliJ IDEA Projects\Programmes\Caesar\src\Component" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="Frames" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Programs\IntelliJ IDEA Projects\Programmes\Caesar\src\Component\images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -380,7 +396,8 @@
       <workItem from="1525167591397" duration="294000" />
       <workItem from="1529267187601" duration="12177000" />
       <workItem from="1529774660938" duration="60000" />
-      <workItem from="1529774870354" duration="2575000" />
+      <workItem from="1529774870354" duration="15302000" />
+      <workItem from="1529862811247" duration="7098000" />
     </task>
     <task id="LOCAL-00001" summary="Almost works">
       <created>1529279068839</created>
@@ -396,15 +413,21 @@
       <option name="project" value="LOCAL" />
       <updated>1529279735954</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Dat shit works fucking better!">
+      <created>1529777615292</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1529777615292</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15895000" />
+    <option name="totallyTimeSpent" value="35720000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="7" />
@@ -416,28 +439,28 @@
       <window_info anchor="right" id="Maven Projects" order="11" weight="0.32969153" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.35772356" />
+      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.26287264" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info id="Capture Tool" order="4" />
       <window_info anchor="right" id="Designer" order="4" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15424165" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15616967" />
       <window_info anchor="right" id="Database" order="10" weight="0.32969153" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="3" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.25745258" />
-      <window_info anchor="right" id="Gradle" order="9" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.29403794" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info id="Captures" order="8" />
       <window_info id="Build Variants" order="9" side_tool="true" />
       <window_info anchor="right" id="Android Model" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info id="Nl-Palette" order="6" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="right" id="Gradle" order="9" />
       <window_info anchor="right" id="Properties" order="7" />
       <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="Android Monitor" order="12" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32791328" />
@@ -460,19 +483,12 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Almost works" />
     <MESSAGE value="C'mon!" />
-    <option name="LAST_COMMIT_MESSAGE" value="C'mon!" />
+    <MESSAGE value="Dat shit works fucking better!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dat shit works fucking better!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Frames/MainFrame.java</url>
-          <line>66</line>
-          <properties />
-          <option name="timeStamp" value="70" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="78" />
+      <option name="time" value="89" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -480,24 +496,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Panels/PermutationPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="41" column="63" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Frames/Slot.java" />
-    <entry file="file://$PROJECT_DIR$/src/Frames/MainFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="48" column="27" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Panels/EditPanel.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Panels/FreedmanPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -526,7 +524,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Frames/MainFrame.java">
+    <entry file="file://$PROJECT_DIR$/src/Main/MainFrame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret line="48" column="27" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
@@ -601,60 +599,307 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Component/TextPanel.java" />
-    <entry file="file://$PROJECT_DIR$/src/Panels/FreedmanPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="72" column="19" selection-start-line="72" selection-start-column="19" selection-end-line="72" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Panels/PermutationPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="50" column="47" selection-start-line="50" selection-start-column="47" selection-end-line="50" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Component/GistogrammPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-180">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Panels/SubstitutionPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Frames/FunctionalFrame.java" />
-    <entry file="file://$PROJECT_DIR$/src/ControlButton/ClearButton.java">
+    <entry file="jar://$PROJECT_DIR$/../../../JDK/src.zip!/javax/swing/JPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+        <state relative-caret-position="-922">
+          <caret line="64" column="13" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
+          <folding>
+            <element signature="e#3226#3227#0" expanded="true" />
+            <element signature="e#3279#3280#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ControlButton/KeyButton.java">
+    <entry file="jar://$PROJECT_DIR$/../../../JDK/src.zip!/java/awt/Font.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        <state relative-caret-position="760">
+          <caret line="636" column="29" selection-start-line="636" selection-start-column="29" selection-end-line="636" selection-end-column="29" />
+          <folding>
+            <element signature="docComment;class#Font#0" />
+            <element signature="e#9547#10010#0" />
+            <element signature="initializer##0;class#Font#0" />
+            <element signature="e#10212#10355#0" />
+            <element signature="e#10496#10708#0" />
+            <element signature="e#10764#10981#0" />
+            <element signature="e#11048#11263#0" />
+            <element signature="e#11326#11537#0" />
+            <element signature="e#11591#11807#0" />
+            <element signature="e#11965#12009#0" />
+            <element signature="e#12060#12196#0" />
+            <element signature="e#12247#12389#0" />
+            <element signature="e#12440#12520#0" />
+            <element signature="e#12574#12697#0" />
+            <element signature="e#12752#12851#0" />
+            <element signature="e#12907#13307#0" />
+            <element signature="e#13361#13524#0" />
+            <element signature="e#13574#13737#0" />
+            <element signature="e#13770#13984#0" />
+            <element signature="e#14015#14161#0" />
+            <element signature="e#14191#14343#0" />
+            <element signature="e#14380#14438#0" />
+            <element signature="e#15448#15642#0" />
+            <element signature="e#15739#16246#0" />
+            <element signature="e#16252#16705#0" />
+            <element signature="e#16252#17335#0" />
+            <element signature="e#17341#18193#0" />
+            <element signature="e#18199#21356#0" />
+            <element signature="e#18199#21581#0" />
+            <element signature="e#21587#21832#0" />
+            <element signature="e#21838#23021#0" />
+            <element signature="e#23027#23766#0" />
+            <element signature="e#23772#26526#0" />
+            <element signature="e#26532#27223#0" />
+            <element signature="e#27371#27665#0" />
+            <element signature="e#27371#28072#0" />
+            <element signature="e#28078#28140#0" />
+            <element signature="e#28261#28342#0" />
+            <element signature="e#28537#28620#0" />
+            <element signature="e#28713#28771#0" />
+            <element signature="e#29378#29456#0" />
+            <element signature="e#29378#30043#0" />
+            <element signature="e#30049#30713#0" />
+            <element signature="e#30049#32242#0" />
+            <element signature="e#30795#30821#0" />
+            <element signature="e#32248#32420#0" />
+            <element signature="e#32248#32888#0" />
+            <element signature="e#32894#34495#0" />
+            <element signature="e#32894#35473#0" />
+            <element signature="e#34754#34820#0" />
+            <element signature="e#35479#39904#0" />
+            <element signature="class#36001:36213" />
+            <element signature="method#run#0;class#36001:36213" />
+            <element signature="class#36490:36732" />
+            <element signature="method#run#0;class#36490:36732" />
+            <element signature="class#39132:39364" />
+            <element signature="method#run#0;class#39132:39364" />
+            <element signature="e#39910#41866#0" />
+            <element signature="e#39910#42653#0" />
+            <element signature="e#42659#43335#0" />
+            <element signature="e#42659#46535#0" />
+            <element signature="e#44440#44504#0" />
+            <element signature="e#45352#45384#0" />
+            <element signature="e#46541#46570#0" />
+            <element signature="e#47050#47861#0" />
+            <element signature="e#48316#49182#0" />
+            <element signature="e#48316#49388#0" />
+            <element signature="e#49394#49743#0" />
+            <element signature="e#49835#50229#0" />
+            <element signature="e#50292#50752#0" />
+            <element signature="e#50845#51340#0" />
+            <element signature="e#50845#51546#0" />
+            <element signature="e#51552#51812#0" />
+            <element signature="e#51874#52946#0" />
+            <element signature="e#53006#53242#0" />
+            <element signature="e#53311#53622#0" />
+            <element signature="e#53692#54007#0" />
+            <element signature="e#54085#54404#0" />
+            <element signature="e#54486#54884#0" />
+            <element signature="e#54963#55143#0" />
+            <element signature="e#55234#56005#0" />
+            <element signature="e#56095#59642#0" />
+            <element signature="e#56095#62265#0" />
+            <element signature="e#62271#63247#0" />
+            <element signature="e#62271#63532#0" />
+            <element signature="e#63562#63717#0" />
+            <element signature="e#63562#64365#0" />
+            <element signature="e#64371#64776#0" />
+            <element signature="e#64371#66169#0" />
+            <element signature="e#66175#66412#0" />
+            <element signature="e#66175#66915#0" />
+            <element signature="e#67400#67486#0" />
+            <element signature="e#67539#67804#0" />
+            <element signature="e#67539#68262#0" />
+            <element signature="e#68268#68514#0" />
+            <element signature="e#68268#69831#0" />
+            <element signature="e#68775#68806#0" />
+            <element signature="e#69837#70094#0" />
+            <element signature="e#70182#70403#0" />
+            <element signature="e#70504#71135#0" />
+            <element signature="e#71234#71463#0" />
+            <element signature="e#71579#71877#0" />
+            <element signature="e#71579#72905#0" />
+            <element signature="e#72911#73238#0" />
+            <element signature="e#72911#73690#0" />
+            <element signature="e#73696#74170#0" />
+            <element signature="e#73696#74527#0" />
+            <element signature="e#74533#74804#0" />
+            <element signature="e#74533#75137#0" />
+            <element signature="e#75143#75560#0" />
+            <element signature="e#75143#75798#0" />
+            <element signature="e#75804#76077#0" />
+            <element signature="e#75804#76483#0" />
+            <element signature="e#76489#76823#0" />
+            <element signature="e#76489#77164#0" />
+            <element signature="e#77170#77811#0" />
+            <element signature="e#77904#78419#0" />
+            <element signature="e#77904#78738#0" />
+            <element signature="e#78744#79627#0" />
+            <element signature="e#78744#80135#0" />
+            <element signature="e#80141#81118#0" />
+            <element signature="e#80141#81636#0" />
+            <element signature="e#81642#82469#0" />
+            <element signature="e#81642#83219#0" />
+            <element signature="e#83225#83525#0" />
+            <element signature="e#83610#84514#0" />
+            <element signature="e#84520#85075#0" />
+            <element signature="e#85269#88489#0" />
+            <element signature="e#88495#88884#0" />
+            <element signature="e#88495#89078#0" />
+            <element signature="e#89084#89517#0" />
+            <element signature="e#89084#89868#0" />
+            <element signature="e#89874#90302#0" />
+            <element signature="e#89874#90655#0" />
+            <element signature="e#90661#91102#0" />
+            <element signature="e#90661#91462#0" />
+            <element signature="e#91468#92558#0" />
+            <element signature="e#91468#92744#0" />
+            <element signature="e#92749#94228#0" />
+            <element signature="e#92749#94517#0" />
+            <element signature="e#94522#96016#0" />
+            <element signature="e#94522#97667#0" />
+            <element signature="e#96621#96657#0" />
+            <element signature="e#97672#99281#0" />
+            <element signature="e#97672#100225#0" />
+            <element signature="e#100231#100677#0" />
+            <element signature="e#100231#101015#0" />
+            <element signature="e#101021#101750#0" />
+            <element signature="e#101913#102644#0" />
+            <element signature="e#102811#103575#0" />
+            <element signature="e#102811#103788#0" />
+            <element signature="e#103794#104518#0" />
+            <element signature="e#103794#104736#0" />
+            <element signature="e#104742#106781#0" />
+            <element signature="e#104742#107330#0" />
+            <element signature="e#107336#107459#0" />
+            <element signature="e#107519#107642#0" />
+            <element signature="e#107702#107845#0" />
+            <element signature="e#107908#108050#0" />
+            <element signature="e#108114#108356#0" />
+            <element signature="e#108362#108636#0" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ControlButton/RefreshButton.java">
+    <entry file="jar://$PROJECT_DIR$/../../../JDK/src.zip!/java/awt/Rectangle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="48" column="51" selection-start-line="48" selection-start-column="51" selection-end-line="48" selection-end-column="51" />
+        <state relative-caret-position="-1280">
+          <caret line="171" column="11" selection-start-line="171" selection-start-column="11" selection-end-line="171" selection-end-column="11" />
+          <folding>
+            <element signature="docComment;class#Rectangle#0" />
+            <element signature="e#4903#5096#0" />
+            <element signature="e#5120#5313#0" />
+            <element signature="e#5337#5483#0" />
+            <element signature="e#5511#5665#0" />
+            <element signature="e#5815#5869#0" />
+            <element signature="initializer##0;class#Rectangle#0" />
+            <element signature="e#6120#6301#0" />
+            <element signature="e#6364#6662#0" />
+            <element signature="e#6753#7209#0" />
+            <element signature="e#6753#7373#0" />
+            <element signature="e#7379#7716#0" />
+            <element signature="e#7809#8249#0" />
+            <element signature="e#8349#8619#0" />
+            <element signature="e#8693#8953#0" />
+            <element signature="e#9040#9235#0" />
+            <element signature="e#9292#9487#0" />
+            <element signature="e#9544#9725#0" />
+            <element signature="e#9790#9973#0" />
+            <element signature="e#10040#10564#0" />
+            <element signature="e#10677#10727#0" />
+            <element signature="e#10829#11284#0" />
+            <element signature="e#11385#12222#0" />
+            <element signature="e#12337#13099#0" />
+            <element signature="e#12337#14290#0" />
+            <element signature="e#13267#13317#0" />
+            <element signature="e#14295#14721#0" />
+            <element signature="e#14727#15422#0" />
+            <element signature="e#14727#15605#0" />
+            <element signature="e#15611#16098#0" />
+            <element signature="e#16175#16635#0" />
+            <element signature="e#16717#17156#0" />
+            <element signature="e#17232#17525#0" />
+            <element signature="e#17232#17624#0" />
+            <element signature="e#17630#18145#0" />
+            <element signature="e#17630#20770#0" />
+            <element signature="e#18347#18367#0" />
+            <element signature="e#18483#18523#0" />
+            <element signature="e#18984#19036#0" />
+            <element signature="e#19510#19538#0" />
+            <element signature="e#19685#19729#0" />
+            <element signature="e#20776#21292#0" />
+            <element signature="e#21382#21818#0" />
+            <element signature="e#21905#22386#0" />
+            <element signature="e#22478#22821#0" />
+            <element signature="e#22478#22949#0" />
+            <element signature="e#22955#23319#0" />
+            <element signature="e#23405#23843#0" />
+            <element signature="e#23928#24336#0" />
+            <element signature="e#24445#25139#0" />
+            <element signature="e#24445#26352#0" />
+            <element signature="e#25643#25694#0" />
+            <element signature="e#25929#25991#0" />
+            <element signature="e#26358#26868#0" />
+            <element signature="e#26358#27445#0" />
+            <element signature="e#27451#27894#0" />
+            <element signature="e#27451#28512#0" />
+            <element signature="e#28518#29159#0" />
+            <element signature="e#28518#30003#0" />
+            <element signature="e#29659#29709#0" />
+            <element signature="e#30009#31084#0" />
+            <element signature="e#30009#32504#0" />
+            <element signature="e#31233#31277#0" />
+            <element signature="e#32161#32223#0" />
+            <element signature="e#32510#33781#0" />
+            <element signature="e#32510#34475#0" />
+            <element signature="e#34481#35783#0" />
+            <element signature="e#35852#36995#0" />
+            <element signature="e#35852#37974#0" />
+            <element signature="e#37665#37716#0" />
+            <element signature="e#37980#38986#0" />
+            <element signature="e#37980#41140#0" />
+            <element signature="e#39278#39308#0" />
+            <element signature="e#39749#39762#0" />
+            <element signature="e#40068#40123#0" />
+            <element signature="e#41146#41196#0" />
+            <element signature="e#41285#41335#0" />
+            <element signature="e#41285#42282#0" />
+            <element signature="e#42288#42338#0" />
+            <element signature="e#42288#42619#0" />
+            <element signature="e#42625#42675#0" />
+            <element signature="e#42625#42938#0" />
+            <element signature="e#42944#43471#0" />
+            <element signature="e#42944#43796#0" />
+            <element signature="e#43802#44050#0" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ControlButton/ReplaceButton.java">
+    <entry file="jar://$PROJECT_DIR$/../../../JDK/jre/lib/rt.jar!/java/awt/image/BufferedImage.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../../JDK/src.zip!/java/awt/image/BufferedImage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state relative-caret-position="-663" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Component/Slot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Component/Slots.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="143" column="26" selection-start-line="143" selection-start-column="26" selection-end-line="143" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -673,85 +918,130 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/ControlButton/ClearButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-          <folding>
-            <element signature="e#105#106#0" expanded="true" />
-            <element signature="e#153#154#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="221">
+          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../JDK/src.zip!/javax/swing/JPanel.java">
+    <entry file="file://$PROJECT_DIR$/src/Panels/SubstitutionPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-922">
-          <caret line="64" column="13" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
-          <folding>
-            <element signature="e#3226#3227#0" expanded="true" />
-            <element signature="e#3279#3280#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="51">
+          <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Panels/PermutationPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="228" column="39" selection-start-line="228" selection-start-column="39" selection-end-line="228" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Panels/EditPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+        <state relative-caret-position="34">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
           <folding>
-            <element signature="class#656:1203" />
+            <element signature="imports" expanded="true" />
+            <element signature="method#EditPanel#0;class#EditPanel#0" />
+            <element signature="method#transposeFunction#0;class#EditPanel#0" />
+            <element signature="method#deleteWordFunction#0;class#EditPanel#0" />
+            <element signature="method#checkSymb#0;class#EditPanel#0" />
+            <element signature="method#divideColumnFunction#0;class#EditPanel#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Panels/FrequencyFunctionPanel.java">
+    <entry file="file://$PROJECT_DIR$/src/ControlButton/KeyButton.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ControlButton/RefreshButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="48" column="51" selection-start-line="48" selection-start-column="51" selection-end-line="48" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ControlButton/ReplaceButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Panels/FreedmanPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="27" column="24" lean-forward="true" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
           <folding>
-            <element signature="class#707:1230" />
+            <element signature="e#249#250#0" expanded="true" />
+            <element signature="e#276#277#0" expanded="true" />
+            <element signature="method#toCountFreedman#0;class#FreedmanPanel#0" />
+            <element signature="method#toCountMutFreedman#0;class#FreedmanPanel#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Frames/MainFrame.java">
+    <entry file="file://$PROJECT_DIR$/src/Main/MainFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-327">
-          <caret line="18" column="38" lean-forward="true" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+        <state relative-caret-position="361">
+          <caret line="38" column="69" lean-forward="true" selection-start-line="38" selection-start-column="69" selection-end-line="38" selection-end-column="69" />
           <folding>
-            <element signature="class#1807:2351" />
-            <element signature="class#2393:2937" />
+            <element signature="imports" expanded="true" />
+            <element signature="method#toDevisibleAll#0;class#MainFrame#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#79#80#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Constants/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Component/Slot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="72" column="37" lean-forward="true" selection-start-line="72" selection-start-column="37" selection-end-line="72" selection-end-column="37" />
+        <state relative-caret-position="473">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2323#2324#0" expanded="true" />
-            <element signature="e#2384#2385#0" expanded="true" />
-            <element signature="e#2427#2428#0" expanded="true" />
+            <element signature="class#Buttons#0;class#Constants#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Component/Slots.java">
+    <entry file="file://$PROJECT_DIR$/src/Component/GistogrammPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1">
-          <caret line="138" column="45" selection-start-line="138" selection-start-column="45" selection-end-line="138" selection-end-column="45" />
+        <state relative-caret-position="34">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#GistogrammPanel#0;class#GistogrammPanel#0" />
+            <element signature="method#paint#0;class#GistogrammPanel#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Panels/FrequencyFunctionPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="55" column="50" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#FrequencyFunctionPanel#0;class#FrequencyFunctionPanel#0" />
+            <element signature="class#788:1311" />
+            <element signature="e#1119#1120#0" expanded="true" />
+            <element signature="e#1183#1184#0" expanded="true" />
+            <element signature="method#toBuildFrequencyGistogrammPane#0;class#FrequencyFunctionPanel#0" />
           </folding>
         </state>
       </provider>

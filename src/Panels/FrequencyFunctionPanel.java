@@ -1,28 +1,32 @@
 package Panels;
 
-import Component.GistogrammPanel;
-import Constants.Constants;
-
-import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.swing.*;
+
+import Component.GistogrammPanel;
+import Constants.Constants;
+
 public class FrequencyFunctionPanel extends JPanel {
     private JTextArea mainText;
-    private GistogrammPanel gistogramm = null;
-    private int q = 0;
+    private JScrollPane gistogrammPane;
 
     public FrequencyFunctionPanel(JTextArea textArea) {
+        this.setLayout(null);
+
         mainText = textArea;
         setBackground(Constants.MAIN_COLOR);
 
-        JButton toCount = new JButton("To count");
-        toCount.setFont(new Font("Times New Roman", Font.BOLD, 30));
-        add(toCount);
-        toCount.addMouseListener(new MouseListener() {
+        JButton countButton = new JButton(Constants.Buttons.BUTTON_STATISTICS);
+        countButton.setBackground(Constants.MAIN_TEXTPANEL_COLOR);
+        countButton.setForeground(Color.WHITE);
+        countButton.setFont(new Font("Arial", Font.BOLD, 22));
+        add(countButton).setBounds(Constants.Sizes.STATISTICS_BUTTON_BOUNDS);
+        countButton.addMouseListener(new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
             }
@@ -34,7 +38,7 @@ public class FrequencyFunctionPanel extends JPanel {
 
             @Override
             public void mouseReleased(MouseEvent e) {
-                toCountFrequency(mainText);
+                toBuildFrequencyGistogrammPane();
             }
 
             @Override
@@ -49,22 +53,23 @@ public class FrequencyFunctionPanel extends JPanel {
         });
     }
 
-    private void toCountFrequency(JTextArea MText) {
-        String text = MText.getText();
-        if (MText.getText().isEmpty()) return;
+    private void toBuildFrequencyGistogrammPane() {
+        String text = mainText.getText();
+        if (mainText.getText().isEmpty()) return;
 
+        text = text.replaceAll(" ", "_");
+
+        Integer value;
         Map<Character, Integer> Frequency = new HashMap<>();
 
-        //text = text.toUpperCase();
-
-        for (int i = 0; i < text.length(); i++)
+        for (int i = 0; i < text.length(); i++){
             Frequency.put(text.charAt(i), 0);
+        }
 
         for (int i = 0; i < text.length(); i++) {
             if (text.charAt(i) != '\n') {
-                Integer value = Frequency.get(text.charAt(i));
-                value = value + 1;
-                Frequency.put(text.charAt(i), value);
+                value = Frequency.get(text.charAt(i));
+                Frequency.put(text.charAt(i), ++value);
             }
         }
 
@@ -75,25 +80,16 @@ public class FrequencyFunctionPanel extends JPanel {
             data = new String[Frequency.size()][3];
         }
 
-        Double[] quantity = new Double[Frequency.size()];
-        for (int i = 0; i < Frequency.size(); i++)
-            quantity[i] = Double.valueOf(0.0);
-        Double length = new Double(Double.valueOf(text.length()));
 
         int j = 0;
         for (Map.Entry entry : Frequency.entrySet()) {
             data[j][1] = entry.getValue().toString();
-            String temp = entry.getValue().toString();
-            quantity[j] = Double.valueOf(temp);
             data[j][0] = entry.getKey().toString();
-
-            Double res = Double.valueOf(quantity[j] / length);
-            data[j][2] = String.valueOf(res);
+            data[j][2] = String.valueOf(Double.valueOf(entry.getValue().toString()) / (double) text.length());
             j++;
         }
 
         String[] tmp;
-
         for (int i = 0; i < Frequency.size() - 1; i++)
             for (int k = i; k < Frequency.size(); k++)
                 if (Integer.parseInt(data[i][1]) < Integer.parseInt(data[k][1])) {
@@ -102,28 +98,23 @@ public class FrequencyFunctionPanel extends JPanel {
                     data[k] = tmp;
                 }
 
-        if (q == 1) {
-            remove(gistogramm);
-        } else {
-            q = 1;
+        if (this.gistogrammPane != null) {
+            this.remove(gistogrammPane);
+            repaint();
         }
+
         updateUI();
 
         String s[] = new String[Frequency.size()];
         String d[] = new String[Frequency.size()];
         for (int i = 0; i < Frequency.size(); i++) {
             s[i] = data[i][0];
-            System.out.print(s[i]);
-            System.out.print(" = ");
             d[i] = data[i][2];
-            System.out.print(d[i]);
-            System.out.println();
         }
 
-        gistogramm = new GistogrammPanel(s, d);
-
-        gistogramm.setPreferredSize(new Dimension(585, 330));
-        JScrollPane qwer2 = new JScrollPane(gistogramm);
-        add(qwer2);
+        gistogrammPane = new JScrollPane(new GistogrammPanel(s, d));
+        gistogrammPane.setBorder(null);
+        gistogrammPane.setFocusable(false);
+        add(gistogrammPane).setBounds(Constants.Sizes.GISTOGRAMM_BOUNDS);
     }
 }

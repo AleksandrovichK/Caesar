@@ -29,6 +29,7 @@ public class Slots extends JPanel {
             public void mouseReleased(MouseEvent e) {
                 toInvisibleOthers(0);
                 slots[0].setPanelVisible(true);
+                repaint();
             }
 
             @Override
@@ -56,6 +57,7 @@ public class Slots extends JPanel {
             public void mouseReleased(MouseEvent e) {
                 toInvisibleOthers(1);
                 slots[1].setPanelVisible(true);
+                repaint();
             }
 
             @Override
@@ -83,6 +85,7 @@ public class Slots extends JPanel {
             public void mouseReleased(MouseEvent e) {
                 toInvisibleOthers(2);
                 slots[2].setPanelVisible(true);
+                repaint();
             }
 
             @Override
@@ -110,6 +113,7 @@ public class Slots extends JPanel {
             public void mouseReleased(MouseEvent e) {
                 toInvisibleOthers(3);
                 slots[3].setPanelVisible(true);
+                repaint();
             }
 
             @Override
@@ -137,6 +141,7 @@ public class Slots extends JPanel {
             public void mouseReleased(MouseEvent e) {
                 toInvisibleOthers(4);
                 slots[4].setPanelVisible(true);
+                repaint();
             }
 
             @Override

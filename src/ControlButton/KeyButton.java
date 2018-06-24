@@ -1,7 +1,6 @@
 package ControlButton;
 
 import java.awt.Color;
-import java.awt.Frame;
 import java.awt.GradientPaint;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -9,8 +8,6 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 import javax.swing.JPanel;
-
-import Frames.MainFrame;
 
 public class KeyButton extends JPanel{
 	Color up;

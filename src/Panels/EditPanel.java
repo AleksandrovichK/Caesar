@@ -1,7 +1,7 @@
 package Panels;
 
 import Constants.Constants;
-import Frames.MainFrame;
+import Main.MainFrame;
 
 import javax.swing.*;
 import java.awt.*;

@@ -15,13 +15,13 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 import ControlButton.KeyButton;
-import Frames.MainFrame;
+import Main.MainFrame;
 
 public class PermutationPanel extends JPanel {
 
 
 	private JTextArea primaryText = new JTextArea();
-	private JButton butChange = new JButton("Поменять");
+	private JButton butChange = new JButton("РџРѕРјРµРЅСЏС‚СЊ");
 	private JTextField labelOld = new JTextField();
 	private JTextField labelNew = new JTextField();
 	private JTextField keyInput = new JTextField("");
@@ -227,12 +227,6 @@ public class PermutationPanel extends JPanel {
 	}
 	public void paint(Graphics g) {
 		Graphics2D gg = (Graphics2D) g;
-		Color up = new Color(0, 31, 85);
-		Color down = new Color(3, 15, 37);
-		gg.setPaint(new RadialGradientPaint(getWidth() / 2, getHeight() / 2, getWidth() / 2, new float[] {0f,1f},
-				new Color[] { up, down }));
-		gg.fillRect(0, 0, getWidth(), getHeight());
-
 
 		gg.setFont(new Font("Consolas", Font.BOLD, 18));
 		gg.setPaint(Color.WHITE);

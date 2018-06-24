@@ -6,29 +6,26 @@ import java.awt.event.MouseListener;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.swing.JButton;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTable;
-import javax.swing.JTextArea;
-
-import Frames.MainFrame;
+import javax.swing.*;
 
 public class FreedmanPanel extends JPanel {
 
 	private void settings() {
 		this.setLayout(null);
-	};
+	}
 
 	private JTextArea mainText;
-	private JButton toCount = new JButton("Посчитать индекс Фридмана");
-	private JButton toMutCount = new JButton("Посчитать индекс совпадения Фридмана");
-	JScrollPane pane1 = null;
-	JScrollPane pane2 = null;
-	JScrollPane pane3 = null;
+	private JButton toCount = new JButton("РџРѕСЃС‡РёС‚Р°С‚СЊ РёРЅРґРµРєСЃ Р¤СЂРёРґРјР°РЅР°");
+	private JButton toMutCount = new JButton("РџРѕСЃС‡РёС‚Р°С‚СЊ РёРЅРґРµРєСЃ СЃРѕРІРїР°РґРµРЅРёСЏ Р¤СЂРёРґРјР°РЅР°");
+	private JScrollPane pane1 = null;
+	private JScrollPane pane2 = null;
+	private JScrollPane pane3 = null;
 	private JTextArea inText = new JTextArea();
 	private String value = ("");
 	private String value2 = ("");
+
+	private JLabel input;
+	private JLabel euro;
 
 	public JTextArea toGetText() {
 		return inText;
@@ -40,19 +37,13 @@ public class FreedmanPanel extends JPanel {
 
 	public void paint(Graphics g) {
 		Graphics2D gg = (Graphics2D) g;
-		Color up = new Color(0, 31, 85);
-		Color down = new Color(3, 15, 37);
-		gg.setPaint(new RadialGradientPaint(getWidth() / 2, getHeight() / 2, getWidth() / 2, new float[] { 0f, 1f },
-				new Color[] { up, down }));
-		gg.fillRect(0, 0, getWidth(), getHeight());
 
-		gg.setFont(new Font("Times New Roman", Font.BOLD, 18));
+		gg.setFont(new Font("Calibri", Font.BOLD, 18));
 		gg.setPaint(Color.WHITE);
-		gg.drawString("Индекс Фридмана для введённого текста:", 0, 40);
-		gg.drawString("Индекс Фридмана для европейских языков:", 0, 195);
-		gg.drawString("Взаимный индекс совпадения Фридмана:", 0, 60);
-		gg.drawString("Сдвиг для русского языка:", 0, 355);
-		gg.drawString("Сдвиг для английского языка:", 0, 285);
+
+		gg.drawString("Р’Р·Р°РёРјРЅС‹Р№ РёРЅРґРµРєСЃ СЃРѕРІРїР°РґРµРЅРёСЏ Р¤СЂРёРґРјР°РЅР°:", 0, 60);
+		gg.drawString("РЎРґРІРёРі РґР»СЏ СЂСѓСЃСЃРєРѕРіРѕ СЏР·С‹РєР°:", 0, 355);
+		gg.drawString("РЎРґРІРёРі РґР»СЏ Р°РЅРіР»РёР№СЃРєРѕРіРѕ СЏР·С‹РєР°:", 0, 285);
 		gg.drawString(value, 347, 40);
 		gg.drawString(value2, 340, 60);
 
@@ -66,11 +57,18 @@ public class FreedmanPanel extends JPanel {
 		inText.repaint();
 		toCount.repaint();
 		toMutCount.repaint();
+
+	//	input.repaint();
+		euro.repaint();
 	}
 
 	public FreedmanPanel(JTextArea MText) {
 		mainText = MText;
 		settings();
+		input = new JLabel("РРЅРґРµРєСЃ Р¤СЂРёРґРјР°РЅР° РґР»СЏ РІРІРµРґС‘РЅРЅРѕРіРѕ С‚РµРєСЃС‚Р°:");
+		euro = new JLabel ("РРЅРґРµРєСЃ Р¤СЂРёРґРјР°РЅР° РґР»СЏ РµРІСЂРѕРїРµР№СЃРєРёС… СЏР·С‹РєРѕРІ:");
+		this.add(euro).setBounds(0, 195, 300, 20);
+		this.add(input).setBounds(0, 40, 300,20);
 
 		this.add(inText).setBounds(0, 70, 585, 100);
 		this.add(toCount).setBounds(0, 2, 285, 20);
@@ -137,8 +135,6 @@ public class FreedmanPanel extends JPanel {
 	}
 
 	private void toCountFreedman(String text) {
-		int m = text.length();
-
 		Map<Character, Integer> Frequency = new HashMap<>();
 
 		text = text.toUpperCase();
@@ -224,7 +220,7 @@ public class FreedmanPanel extends JPanel {
 	}
 
 	private void toPrintFreedmanTable() {
-		String[] columns = { "Русский", "Английский", "Французский", "Немецкий", "Итальянский", "Испанский" };
+		String[] columns = { "Russian", "English", "French", "German", "Italian", "Spanish" };
 		String[][] data = new String[1][6];
 
 		data[0][0] = "0,0553";
@@ -259,7 +255,7 @@ public class FreedmanPanel extends JPanel {
 		data[0][13] = "0,0428";
 
 		JTable table = new JTable(data, columns);
-		table.setFont(new Font("Times New Roman", Font.PLAIN, 12));
+		table.setFont(new Font("Microsoft JhengHei UI", Font.PLAIN, 12));
 		pane2 = new JScrollPane(table);
 		this.add(pane2).setBounds(0, 290, 585, 39);
 	}
@@ -288,7 +284,7 @@ public class FreedmanPanel extends JPanel {
 		data[0][16] = "0,0249";
 
 		JTable table = new JTable(data, columns);
-		table.setFont(new Font("Times New Roman", Font.PLAIN, 10));
+		table.setFont(new Font("Microsoft JhengHei UI", Font.PLAIN, 10));
 		pane1 = new JScrollPane(table);
 
 		this.add(pane1).setBounds(0, 360, 585, 39);
