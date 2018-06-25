@@ -7,288 +7,313 @@ import java.util.HashMap;
 import java.util.Map;
 
 import javax.swing.*;
+import javax.swing.border.MatteBorder;
 
 import Buttons.JBlackButton;
+import Constants.Constants;
 
 public class FreedmanPanel extends JPanel {
+    private JTextArea mainText;
+    private JTextArea textMutualCoincidence = new JTextArea();
+    private JLabel coincidenceValue = new JLabel(Constants.Buttons.BUTTON_FREEDMAN + ": ");
+    private JLabel mutualCoincidenceValue = new JLabel(Constants.Buttons.BUTTON_MUTUAL_FRIEDMAN + " with text: ");
 
-	private void settings() {
-		this.setLayout(null);
-	}
+    public FreedmanPanel(JTextArea mainText) {
+        this.setLayout(null);
 
-	private JTextArea mainText;
-	private JBlackButton toCount = new JBlackButton("Посчитать индекс Фридмана");
-	private JBlackButton toMutCount = new JBlackButton("Посчитать индекс совпадения Фридмана");
-	private JScrollPane pane1 = null;
-	private JScrollPane pane2 = null;
-	private JScrollPane pane3 = null;
-	private JTextArea inText = new JTextArea();
-	private String value = ("");
-	private String value2 = ("");
+        this.mainText = mainText;
+        setBackground(Constants.Colors.MAIN_COLOR);
 
-	private JLabel input;
-	private JLabel euro;
+        textMutualCoincidence.setBackground(Constants.Colors.MAIN_TEXTPANEL_COLOR);
+        textMutualCoincidence.setForeground(Color.WHITE);
+        textMutualCoincidence.setFont(Constants.Fonts.TEXTAREA_FONT);
+        add(textMutualCoincidence).setBounds(Constants.Sizes.TEXTPANEL_MUTUALFRIEDMAN_BOUNDS);
 
-	public JTextArea toGetText() {
-		return inText;
-	}
+        coincidenceValue.setForeground(Color.WHITE);
+        coincidenceValue.setFont(Constants.Fonts.FIELD_FONT);
+        add(coincidenceValue).setBounds(Constants.Sizes.VALUE_COINCIDENCE_BOUNDS);
 
-	public void setText(JTextArea text) {
-		inText = text;
-	}
+        mutualCoincidenceValue.setForeground(Color.WHITE);
+        mutualCoincidenceValue.setFont(Constants.Fonts.FIELD_FONT);
+        add(mutualCoincidenceValue).setBounds(Constants.Sizes.VALUE_MUTUAL_COINCIDENCE_BOUNDS);
 
-	public void paint(Graphics g) {
-		Graphics2D gg = (Graphics2D) g;
+        JBlackButton coincidenceButton = new JBlackButton(Constants.Buttons.BUTTON_FREEDMAN);
+        coincidenceButton.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
 
-		gg.setFont(new Font("Calibri", Font.BOLD, 18));
-		gg.setPaint(Color.WHITE);
+            }
 
-		gg.drawString("Взаимный индекс совпадения Фридмана:", 0, 60);
-		gg.drawString("Сдвиг для русского языка:", 0, 355);
-		gg.drawString("Сдвиг для английского языка:", 0, 285);
-		gg.drawString(value, 347, 40);
-		gg.drawString(value2, 340, 60);
+            @Override
+            public void mousePressed(MouseEvent e) {
 
-		if (pane1 != null)
-			pane1.repaint();
-		if (pane2 != null)
-			pane2.repaint();
-		if (pane3 != null)
-			pane3.repaint();
+            }
 
-		inText.repaint();
-		toCount.repaint();
-		toMutCount.repaint();
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                toCountFreedman(FreedmanPanel.this.mainText.getText());
+            }
 
-	//	input.repaint();
-		euro.repaint();
-	}
+            @Override
+            public void mouseEntered(MouseEvent e) {
 
-	public FreedmanPanel(JTextArea MText) {
-		mainText = MText;
-		settings();
-		input = new JLabel("Индекс Фридмана для введённого текста:");
-		euro = new JLabel ("Индекс Фридмана для европейских языков:");
-		this.add(euro).setBounds(0, 195, 300, 20);
-		this.add(input).setBounds(0, 40, 300,20);
+            }
 
-		this.add(inText).setBounds(0, 70, 585, 100);
-		this.add(toCount).setBounds(0, 2, 285, 20);
-		this.add(toMutCount).setBounds(300, 2, 285, 20);
+            @Override
+            public void mouseExited(MouseEvent e) {
 
-		toCount.addMouseListener(new MouseListener() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
+            }
+        });
+        add(coincidenceButton).setBounds(Constants.Sizes.BUTTON_COINCIDENCE_BOUNDS);
 
-			}
+        JBlackButton mutualCoincidenceButton = new JBlackButton(Constants.Buttons.BUTTON_MUTUAL_FRIEDMAN);
+        mutualCoincidenceButton.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
 
-			@Override
-			public void mousePressed(MouseEvent e) {
+            }
 
-			}
+            @Override
+            public void mousePressed(MouseEvent e) {
 
-			@Override
-			public void mouseReleased(MouseEvent e) {
-				toCountFreedman(mainText.getText());
-			}
+            }
 
-			@Override
-			public void mouseEntered(MouseEvent e) {
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                if (!textMutualCoincidence.getText().equals("")){
+                toCountMutFreedman(textMutualCoincidence.getText());
+                }
+            }
 
-			}
+            @Override
+            public void mouseEntered(MouseEvent e) {
 
-			@Override
-			public void mouseExited(MouseEvent e) {
+            }
 
-			}
-		});
-		toMutCount.addMouseListener(new MouseListener() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
+            @Override
+            public void mouseExited(MouseEvent e) {
 
-			}
+            }
+        });
+        add(mutualCoincidenceButton).setBounds(Constants.Sizes.BUTTON_MUTUAL_COINCIDENCE_BOUNDS);
 
-			@Override
-			public void mousePressed(MouseEvent e) {
+        JLabel allLanguagesIndex = new JLabel(Constants.Buttons.BUTTON_FREEDMAN+" for languages:");
+        allLanguagesIndex.setForeground(Color.WHITE);
+        add(allLanguagesIndex).setBounds(Constants.Sizes.LABEL_FRIEDMAN);
 
-			}
+        JLabel rusMutualIndex = new JLabel(Constants.Buttons.BUTTON_MUTUAL_FRIEDMAN+" for Russian:");
+        rusMutualIndex.setForeground(Color.WHITE);
+        add(rusMutualIndex).setBounds(Constants.Sizes.LABEL_RUS_MUTUAL_FRIEDMAN);
 
-			@Override
-			public void mouseReleased(MouseEvent e) {
-				String a = inText.getText();
-				toCountMutFreedman(a);
-			}
+        JLabel engMutualIndex = new JLabel(Constants.Buttons.BUTTON_MUTUAL_FRIEDMAN+" for English:");
+        engMutualIndex.setForeground(Color.WHITE);
+        add(engMutualIndex).setBounds(Constants.Sizes.LABEL_ENG_MUTUAL_FRIEDMAN);
 
-			@Override
-			public void mouseEntered(MouseEvent e) {
+        toPrintFreedmanTable();
+        toPrintRusTable();
+        toPrintEngTable();
+        this.updateUI();
+    }
 
-			}
+    private void toCountFreedman(String text) {
+        Map<Character, Integer> Frequency = new HashMap<>();
 
-			@Override
-			public void mouseExited(MouseEvent e) {
+        text = text.toUpperCase();
 
-			}
-		});
+        for (int i = 0; i < text.length(); i++) {
+            if ((int) text.charAt(i) != 10 && (int) text.charAt(i) != 13) {
+                Frequency.put(text.charAt(i), 0);
+            }
+        }
+        for (int i = 0; i < text.length(); i++) {
+            if ((int) text.charAt(i) != 10 && (int) text.charAt(i) != 13) {
+                Integer value = Frequency.get(text.charAt(i));
+                Frequency.put(text.charAt(i), ++value);
+            }
+        }
 
-		toPrintFreedmanTable();
-		toPrintEngTable();
-		toPrintRusTable();
-		this.updateUI();
-	}
+        Double length = (double) text.length();
+        Double Ic = 0.0;
+        Double pi;
 
-	private void toCountFreedman(String text) {
-		Map<Character, Integer> Frequency = new HashMap<>();
+        for (Map.Entry entry : Frequency.entrySet()) {
+            pi = Double.valueOf(entry.getValue().toString()) / length;
+            Ic = Ic + Math.pow(pi, 2);
+        }
 
-		text = text.toUpperCase();
+        coincidenceValue.setText(Constants.Buttons.BUTTON_FREEDMAN + ": " + String.valueOf(Ic));
+        repaint();
+    }
 
-		for (int i = 0; i < text.length(); i++) {
-			if ((int) text.charAt(i) != 10 && (int) text.charAt(i) != 13) {
-				Frequency.put(text.charAt(i), 0);
-			}
-		}
-		for (int i = 0; i < text.length(); i++) {
-			if ((int) text.charAt(i) != 10 && (int) text.charAt(i) != 13) {
-				Integer value = Frequency.get(text.charAt(i));
-				value = value + 1;
-				Frequency.put(text.charAt(i), value);
-			}
-		}
+    private void toCountMutFreedman(String text2) {
+        if (mainText.getText().equals("")) return;
 
-		Double length = new Double(Double.valueOf(text.length()));
-		Double Ic = new Double(0.0);
-		Double pi = new Double(0.0);
+        String text = mainText.getText();
 
-		int i = 0;
-		for (Map.Entry entry : Frequency.entrySet()) {
-			pi = Double.valueOf(entry.getValue().toString()) / length;
-			Ic = Ic + Math.pow(pi, 2);
-		}
+        Map<Character, Integer> Frequency = new HashMap<>();
+        Map<Character, Integer> Frequency2 = new HashMap<>();
 
-		value = String.valueOf(Ic);
-		repaint();
-	}
+        text = text.toUpperCase();
+        text2 = text2.toUpperCase();
 
-	private void toCountMutFreedman(String text2) {
+        for (int i = 0; i < text.length(); i++)
+            if ((int) text.charAt(i) != 10 && (int) text.charAt(i) != 13) {
+                Frequency.put(text.charAt(i), 0);
+            }
+        for (int i = 0; i < text2.length(); i++)
+            if ((int) text.charAt(i) != 10 && (int) text.charAt(i) != 13) {
+                Frequency2.put(text2.charAt(i), 0);
+            }
+        for (int i = 0; i < text.length(); i++) {
+            if ((int) text.charAt(i) != 10 && (int) text.charAt(i) != 13) {
+                Integer value1 = Frequency.get(text.charAt(i));
+                Frequency.put(text.charAt(i), ++value1);
+            }
+        }
 
-		String text = mainText.getText();
+        for (int i = 0; i < text2.length(); i++) {
+            if ((int) text.charAt(i) != 10 && (int) text.charAt(i) != 13) {
+                Integer value2 = Frequency2.get(text2.charAt(i));
+                Frequency2.put(text2.charAt(i), ++value2);
+            }
+        }
 
-		Map<Character, Integer> Frequency = new HashMap<Character, Integer>();
-		Map<Character, Integer> Frequency2 = new HashMap<Character, Integer>();
+        Double length = (double) text.length();
+        Double length2 = (double) text2.length();
 
-		text = text.toUpperCase();
-		text2 = text2.toUpperCase();
+        Double MIc = 0.0;
+        Double pi1;
+        Double pi2 = 0.0;
 
-		for (int i = 0; i < text.length(); i++)
-			if ((int) text.charAt(i) != 10 && (int) text.charAt(i) != 13) {
-				Frequency.put(text.charAt(i), 0);
-			}
-		for (int i = 0; i < text2.length(); i++)
-			if ((int) text.charAt(i) != 10 && (int) text.charAt(i) != 13) {
-				Frequency2.put(text2.charAt(i), 0);
-			}
-		for (int i = 0; i < text.length(); i++) {
-			if ((int) text.charAt(i) != 10 && (int) text.charAt(i) != 13) {
-				Integer value = Frequency.get(text.charAt(i));
-				value = value + 1;
-				Frequency.put(text.charAt(i), value);
-			}
-		}
+        for (Map.Entry entry : Frequency.entrySet()) {
+            pi1 = Double.valueOf(entry.getValue().toString()) / length;
+            if (Frequency2.get(entry.getKey()) != null)
+                pi2 = Double.valueOf(Frequency2.get(entry.getKey())) / length2;
+            MIc = MIc + pi1 * pi2;
+        }
 
-		for (int i = 0; i < text2.length(); i++) {
-			if ((int) text.charAt(i) != 10 && (int) text.charAt(i) != 13) {
-				Integer value2 = Frequency2.get(text2.charAt(i));
-				value2 = value2 + 1;
-				Frequency2.put(text2.charAt(i), value2);
-			}
-		}
+        mutualCoincidenceValue.setText(Constants.Buttons.BUTTON_MUTUAL_FRIEDMAN + ": " + String.valueOf(MIc));
+        repaint();
+    }
 
-		Double length = new Double(Double.valueOf(text.length()));
-		Double length2 = new Double(Double.valueOf(text2.length()));
+    private void toPrintFreedmanTable() {
+        Object[] columns = { "Russian", "English", "French", "German", "Italian", "Spanish" };
+        Object[][] data = new String[2][6];
 
-		Double MIc = new Double(0.0);
-		Double pi1 = new Double(0.0);
-		Double pi2 = new Double(0.0);
+        data[0][0] = "Russian";
+        data[0][1] = "English";
+        data[0][2] = "French";
+        data[0][3] = "German";
+        data[0][4] = "Italian";
+        data[0][5] = "Spanish";
 
-		int i = 0;
-		for (Map.Entry entry : Frequency.entrySet()) {
-			pi1 = Double.valueOf(entry.getValue().toString()) / length;
-			if (Frequency2.get(entry.getKey()) != null)
-				pi2 = Double.valueOf(Frequency2.get(entry.getKey())) / length2;
-			MIc = MIc + pi1 * pi2;
-		}
+        data[1][0] = "0.0553";
+        data[1][1] = "0.0662";
+        data[1][2] = "0.0778";
+        data[1][3] = "0.0762";
+        data[1][4] = "0.0738";
+        data[1][5] = "0.0775";
 
-		value2 = String.valueOf(MIc);
-		repaint();
-	}
+        JTable table = new JTable(data, columns);
+        table.setSelectionBackground(Constants.Colors.MAIN_TEXTPANEL_COLOR);
+        table.setSelectionForeground(Color.WHITE);
+        table.setBorder(new MatteBorder(1, 1, 1, 1, Constants.Colors.MAIN_TEXTPANEL_COLOR));
+        table.setFont(Constants.Fonts.TEXTAREA_FONT);
+        table.setForeground(Color.WHITE);
+        table.setBackground(Constants.Colors.MAIN_TEXTPANEL_COLOR);
+        this.add(table).setBounds(Constants.Sizes.TABLE_FRIEDMAN);
+    }
 
-	private void toPrintFreedmanTable() {
-		String[] columns = { "Russian", "English", "French", "German", "Italian", "Spanish" };
-		String[][] data = new String[1][6];
+    private void toPrintRusTable() {
+        String[] columns = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16" };
+        String[][] data = new String[2][17];
 
-		data[0][0] = "0,0553";
-		data[0][1] = "0,0662";
-		data[0][2] = "0,0778";
-		data[0][3] = "0,0762";
-		data[0][4] = "0,0738";
-		data[0][5] = "0,0775";
+        data[0][0] = "0";
+        data[0][1] = "1";
+        data[0][2] = "2";
+        data[0][3] = "3";
+        data[0][4] = "4";
+        data[0][5] = "5";
+        data[0][6] = "6";
+        data[0][7] = "7";
+        data[0][8] = "8";
+        data[0][9] = "9";
+        data[0][10] = "10";
+        data[0][11] = "11";
+        data[0][12] = "12";
+        data[0][13] = "13";
+        data[0][14] = "14";
+        data[0][15] = "15";
+        data[0][16] = "16";
 
-		pane3 = new JScrollPane(new JTable(data, columns));
+        data[1][0] = "0.0553";
+        data[1][1] = "0.0366";
+        data[1][2] = "0.0345";
+        data[1][3] = "0.0400";
+        data[1][4] = "0.0340";
+        data[1][5] = "0.0360";
+        data[1][6] = "0.0326";
+        data[1][7] = "0.0241";
+        data[1][8] = "0.0287";
+        data[1][9] = "0.0317";
+        data[1][10] = "0.0265";
+        data[1][11] = "0.0251";
+        data[1][12] = "0.0244";
+        data[1][13] = "0.0291";
+        data[1][14] = "0.0322";
+        data[1][15] = "0.0244";
+        data[1][16] = "0.0249";
 
-		this.add(pane3).setBounds(0, 200, 585, 39);
-	}
+        JTable table = new JTable(data, columns);
+        table.setFont(Constants.Fonts.TABLE_FONT);
+        table.setForeground(Color.WHITE);
+        table.setBackground(Constants.Colors.MAIN_TEXTPANEL_COLOR);
+        table.setSelectionForeground(Color.WHITE);
+        table.setSelectionBackground(Constants.Colors.MAIN_TEXTPANEL_COLOR);
+        table.setBorder(new MatteBorder(1, 1, 1, 1, Constants.Colors.MAIN_TEXTPANEL_COLOR));
+        this.add(table).setBounds(Constants.Sizes.TABLE_RUS_MUTUAL_FRIEDMAN);
+    }
 
-	private void toPrintEngTable() {
-		String[] columns = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13" };
-		String[][] data = new String[1][14];
+    private void toPrintEngTable() {
+        String[] columns = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13" };
+        String[][] data = new String[2][14];
 
-		data[0][0] = "0,0644";
-		data[0][1] = "0,0394";
-		data[0][2] = "0,0319";
-		data[0][3] = "0,0345";
-		data[0][4] = "0,0436";
-		data[0][5] = "0,0332";
-		data[0][6] = "0,0363";
-		data[0][7] = "0,0389";
-		data[0][8] = "0,0338";
-		data[0][9] = "0,0342";
-		data[0][10] = "0,0378";
-		data[0][11] = "0,0440";
-		data[0][12] = "0,0387";
-		data[0][13] = "0,0428";
+        data[0][0] = "0";
+        data[1][0] = "0.0644";
+        data[0][1] = "1";
+        data[1][1] = "0.0394";
+        data[0][2] = "2";
+        data[1][2] = "0.0319";
+        data[0][3] = "3";
+        data[1][3] = "0.0345";
+        data[0][4] = "4";
+        data[1][4] = "0.0436";
+        data[0][5] = "5";
+        data[1][5] = "0.0332";
+        data[0][6] = "6";
+        data[1][6] = "0.0363";
+        data[0][7] = "7";
+        data[1][7] = "0.0389";
+        data[0][8] = "8";
+        data[1][8] = "0.0338";
+        data[0][9] = "9";
+        data[1][9] = "0.0342";
+        data[0][10] = "10";
+        data[1][10] = "0.0378";
+        data[0][11] = "11";
+        data[1][11] = "0.0440";
+        data[0][12] = "12";
+        data[1][12] = "0.0387";
+        data[0][13] = "13";
+        data[1][13] = "0.0428";
 
-		JTable table = new JTable(data, columns);
-		table.setFont(new Font("Microsoft JhengHei UI", Font.PLAIN, 12));
-		pane2 = new JScrollPane(table);
-		this.add(pane2).setBounds(0, 290, 585, 39);
-	}
-
-	private void toPrintRusTable() {
-		String[] columns = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15",
-				"16" };
-		String[][] data = new String[1][17];
-
-		data[0][0] = "0,0553";
-		data[0][1] = "0,0366";
-		data[0][2] = "0,0345";
-		data[0][3] = "0,0400";
-		data[0][4] = "0,0340";
-		data[0][5] = "0,0360";
-		data[0][6] = "0,0326";
-		data[0][7] = "0,0241";
-		data[0][8] = "0,0287";
-		data[0][9] = "0,0317";
-		data[0][10] = "0,0265";
-		data[0][11] = "0,0251";
-		data[0][12] = "0,0244";
-		data[0][13] = "0,0291";
-		data[0][14] = "0,0322";
-		data[0][15] = "0,0244";
-		data[0][16] = "0,0249";
-
-		JTable table = new JTable(data, columns);
-		table.setFont(new Font("Microsoft JhengHei UI", Font.PLAIN, 10));
-		pane1 = new JScrollPane(table);
-
-		this.add(pane1).setBounds(0, 360, 585, 39);
-	}
+        JTable table = new JTable(data, columns);
+        table.setFont(Constants.Fonts.TABLE_FONT);
+        table.setForeground(Color.WHITE);
+        table.setBackground(Constants.Colors.MAIN_TEXTPANEL_COLOR);
+        table.setSelectionForeground(Color.WHITE);
+        table.setSelectionBackground(Constants.Colors.MAIN_TEXTPANEL_COLOR);
+        table.setBorder(new MatteBorder(1, 1, 1, 1, Constants.Colors.MAIN_TEXTPANEL_COLOR));
+        this.add(table).setBounds(Constants.Sizes.TABLE_ENG_MUTUAL_FRIEDMAN);
+    }
 }

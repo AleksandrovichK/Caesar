@@ -134,8 +134,8 @@ public class EditPanel extends JPanel {
             }
         });
 
-        add(upCaseButton).setBounds(Constants.Sizes.BUTTON_UPCASE_BOUNDS);
         add(cleanButton).setBounds(Constants.Sizes.BUTTON_CLEAN_BOUNDS);
+        add(upCaseButton).setBounds(Constants.Sizes.BUTTON_UPCASE_BOUNDS);
         add(downCaseButton).setBounds(Constants.Sizes.BUTTON_DOWNCASE_BOUNDS);
         add(divideColumnButton).setBounds(Constants.Sizes.BUTTON_DIVIDECOLUMN_BOUNDS);
         add(divideColumnTextField).setBounds(Constants.Sizes.TEXTFIELD_DIVIDECOLUMN_BOUNDS);
