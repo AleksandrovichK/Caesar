@@ -105,8 +105,37 @@ public class EditPanel extends JPanel {
 
             }
         });
+        
+        JBlackButton cleanButton = new JBlackButton(Constants.Buttons.BUTTON_CLEAN);
+        cleanButton.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+               //TODO TEXT CLEANING FROM !@#$%^&*()_+
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+
+            }
+        });
 
         add(upCaseButton).setBounds(Constants.Sizes.BUTTON_UPCASE_BOUNDS);
+        add(cleanButton).setBounds(Constants.Sizes.BUTTON_CLEAN_BOUNDS);
         add(downCaseButton).setBounds(Constants.Sizes.BUTTON_DOWNCASE_BOUNDS);
         add(divideColumnButton).setBounds(Constants.Sizes.BUTTON_DIVIDECOLUMN_BOUNDS);
         add(divideColumnTextField).setBounds(Constants.Sizes.TEXTFIELD_DIVIDECOLUMN_BOUNDS);
