@@ -105,7 +105,7 @@ public class EditPanel extends JPanel {
 
             }
         });
-        
+
         JBlackButton cleanButton = new JBlackButton(Constants.Buttons.BUTTON_CLEAN);
         cleanButton.addMouseListener(new MouseListener() {
             @Override
@@ -120,7 +120,8 @@ public class EditPanel extends JPanel {
 
             @Override
             public void mouseReleased(MouseEvent e) {
-               //TODO TEXT CLEANING FROM !@#$%^&*()_+
+                cleanMainText();
+                //TODO TEXT CLEANING FROM !@#$%^&*()_+
             }
 
             @Override
@@ -142,11 +143,13 @@ public class EditPanel extends JPanel {
     }
 
     private void divideColumnFunction(int number) {
-        if (number == 0)
-            return;
-
         String rawText = mainText.getText();
         StringBuilder dividedText = new StringBuilder();
+
+        if (number == 0) {
+            mainText.setText(rawText.replaceAll("\n", ""));
+            return;
+        }
 
         int iterator = 0;
         for (int i = 0; i < rawText.length(); i++) {
@@ -160,5 +163,28 @@ public class EditPanel extends JPanel {
             }
         }
         mainText.setText(dividedText.toString());
+    }
+
+    private void cleanMainText() {
+        String rawText = mainText.getText().toLowerCase();
+        StringBuilder resultText = new StringBuilder();
+
+        for (int i = 0; i < rawText.length(); i++) {
+            if (isAllowedSymbol(rawText.charAt(i))) {
+                resultText.append(rawText.charAt(i));
+            }
+        }
+
+        mainText.setText(resultText.toString());
+    }
+
+    private boolean isAllowedSymbol(char c) {
+        return c != '!' && c != '@' && c != '\"' && c != '\'' && c != '#' && c != '$' && c != '%' && c != '^' && c != '&' && c != '*' && c != '('
+                && c != ')' && c != '-' && c != '_' && c != '+' && c != '=' && c != '/' && c != '\\' && c != '`' && c != '~' && c != '<' && c != '>'
+                && c != ',' && c != '.' && c != '?' && c != ';' && c != ':' && c != ' ' && c != '№' && c != '\n' && c != '0' && c != '1' && c != '2'
+                && c != '3' && c != '4' && c != '5' && c != '6' && c != '7' && c != '8' && c != '9' && c != 'a' && c != 'b' && c != 'c' && c != 'd'
+                && c != 'e' && c != 'f' && c != 'g' && c != 'h' && c != 'i' && c != 'j' && c != 'k' && c != 'l' && c != 'm' && c != 'n' && c != 'o' && c != 'p'
+                && c != 'q' && c != 'r' && c != 's' && c != 't' && c != 'u' && c != 'v' && c != 'w' && c != 'x' && c != 'y' && c != 'z' && c != '—' && c != '['
+                && c != ']' && c != '{' && c != '}' && c != '–' && c != '\t' && c!='»' && c!='«';
     }
 }

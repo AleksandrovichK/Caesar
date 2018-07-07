@@ -13,4 +13,11 @@ public class JBlackButton extends JButton {
         setForeground(Color.WHITE);
         setFont(Constants.Fonts.BUTTONS_FONT);
     }
+
+    public JBlackButton() {
+        super();
+        setBackground(Constants.Colors.MAIN_TEXTPANEL_COLOR);
+        setForeground(Color.WHITE);
+        setFont(Constants.Fonts.BUTTONS_FONT);
+    }
 }

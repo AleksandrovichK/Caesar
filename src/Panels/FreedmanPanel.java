@@ -14,9 +14,9 @@ import Constants.Constants;
 
 public class FreedmanPanel extends JPanel {
     private JTextArea mainText;
-    private JTextArea textMutualCoincidence = new JTextArea();
-    private JLabel coincidenceValue = new JLabel(Constants.Buttons.BUTTON_FREEDMAN + ": ");
-    private JLabel mutualCoincidenceValue = new JLabel(Constants.Buttons.BUTTON_MUTUAL_FRIEDMAN + " with text: ");
+    private JTextArea textMutualCoincidence;
+    private JLabel coincidenceValue;
+    private JLabel mutualCoincidenceValue;
 
     public FreedmanPanel(JTextArea mainText) {
         this.setLayout(null);
@@ -24,15 +24,23 @@ public class FreedmanPanel extends JPanel {
         this.mainText = mainText;
         setBackground(Constants.Colors.MAIN_COLOR);
 
+        textMutualCoincidence = new JTextArea();
         textMutualCoincidence.setBackground(Constants.Colors.MAIN_TEXTPANEL_COLOR);
         textMutualCoincidence.setForeground(Color.WHITE);
         textMutualCoincidence.setFont(Constants.Fonts.TEXTAREA_FONT);
-        add(textMutualCoincidence).setBounds(Constants.Sizes.TEXTPANEL_MUTUALFRIEDMAN_BOUNDS);
 
+        JScrollPane textPane = new JScrollPane(textMutualCoincidence);
+        textPane.setBorder(null);
+        textPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED );
+        textPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        add(textPane).setBounds(Constants.Sizes.TEXTPANEL_MUTUALFRIEDMAN_BOUNDS);
+
+        coincidenceValue = new JLabel(Constants.Buttons.BUTTON_FREEDMAN + ": ");
         coincidenceValue.setForeground(Color.WHITE);
         coincidenceValue.setFont(Constants.Fonts.FIELD_FONT);
         add(coincidenceValue).setBounds(Constants.Sizes.VALUE_COINCIDENCE_BOUNDS);
 
+        mutualCoincidenceValue = new JLabel(Constants.Buttons.BUTTON_MUTUAL_FRIEDMAN + " with text: ");
         mutualCoincidenceValue.setForeground(Color.WHITE);
         mutualCoincidenceValue.setFont(Constants.Fonts.FIELD_FONT);
         add(mutualCoincidenceValue).setBounds(Constants.Sizes.VALUE_MUTUAL_COINCIDENCE_BOUNDS);
@@ -99,15 +107,15 @@ public class FreedmanPanel extends JPanel {
 
         JLabel allLanguagesIndex = new JLabel(Constants.Buttons.BUTTON_FREEDMAN+" for languages:");
         allLanguagesIndex.setForeground(Color.WHITE);
-        add(allLanguagesIndex).setBounds(Constants.Sizes.LABEL_FRIEDMAN);
+        add(allLanguagesIndex).setBounds(Constants.Sizes.LABEL_FRIEDMAN_BOUNDS);
 
         JLabel rusMutualIndex = new JLabel(Constants.Buttons.BUTTON_MUTUAL_FRIEDMAN+" for Russian:");
         rusMutualIndex.setForeground(Color.WHITE);
-        add(rusMutualIndex).setBounds(Constants.Sizes.LABEL_RUS_MUTUAL_FRIEDMAN);
+        add(rusMutualIndex).setBounds(Constants.Sizes.LABEL_RUS_MUTUAL_FRIEDMAN_BOUNDS);
 
         JLabel engMutualIndex = new JLabel(Constants.Buttons.BUTTON_MUTUAL_FRIEDMAN+" for English:");
         engMutualIndex.setForeground(Color.WHITE);
-        add(engMutualIndex).setBounds(Constants.Sizes.LABEL_ENG_MUTUAL_FRIEDMAN);
+        add(engMutualIndex).setBounds(Constants.Sizes.LABEL_ENG_MUTUAL_FRIEDMAN_BOUNDS);
 
         toPrintFreedmanTable();
         toPrintRusTable();
@@ -187,8 +195,9 @@ public class FreedmanPanel extends JPanel {
 
         for (Map.Entry entry : Frequency.entrySet()) {
             pi1 = Double.valueOf(entry.getValue().toString()) / length;
-            if (Frequency2.get(entry.getKey()) != null)
+            if (Frequency2.get(entry.getKey()) != null) {
                 pi2 = Double.valueOf(Frequency2.get(entry.getKey())) / length2;
+            }
             MIc = MIc + pi1 * pi2;
         }
 
@@ -221,7 +230,7 @@ public class FreedmanPanel extends JPanel {
         table.setFont(Constants.Fonts.TEXTAREA_FONT);
         table.setForeground(Color.WHITE);
         table.setBackground(Constants.Colors.MAIN_TEXTPANEL_COLOR);
-        this.add(table).setBounds(Constants.Sizes.TABLE_FRIEDMAN);
+        this.add(table).setBounds(Constants.Sizes.TABLE_FRIEDMAN_BOUNDS);
     }
 
     private void toPrintRusTable() {
@@ -271,7 +280,7 @@ public class FreedmanPanel extends JPanel {
         table.setSelectionForeground(Color.WHITE);
         table.setSelectionBackground(Constants.Colors.MAIN_TEXTPANEL_COLOR);
         table.setBorder(new MatteBorder(1, 1, 1, 1, Constants.Colors.MAIN_TEXTPANEL_COLOR));
-        this.add(table).setBounds(Constants.Sizes.TABLE_RUS_MUTUAL_FRIEDMAN);
+        this.add(table).setBounds(Constants.Sizes.TABLE_RUS_MUTUAL_FRIEDMAN_BOUNDS);
     }
 
     private void toPrintEngTable() {
@@ -314,6 +323,6 @@ public class FreedmanPanel extends JPanel {
         table.setSelectionForeground(Color.WHITE);
         table.setSelectionBackground(Constants.Colors.MAIN_TEXTPANEL_COLOR);
         table.setBorder(new MatteBorder(1, 1, 1, 1, Constants.Colors.MAIN_TEXTPANEL_COLOR));
-        this.add(table).setBounds(Constants.Sizes.TABLE_ENG_MUTUAL_FRIEDMAN);
+        this.add(table).setBounds(Constants.Sizes.TABLE_ENG_MUTUAL_FRIEDMAN_BOUNDS);
     }
 }

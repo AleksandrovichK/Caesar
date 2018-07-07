@@ -9,7 +9,7 @@ import java.util.Map;
 import javax.swing.*;
 
 import Buttons.JBlackButton;
-import Component.GistogrammPanel;
+import Component.Gistogramm;
 import Constants.Constants;
 
 public class FrequencyFunctionPanel extends JPanel {
@@ -113,7 +113,7 @@ public class FrequencyFunctionPanel extends JPanel {
             d[i] = data[i][2];
         }
 
-        gistogrammPane = new JScrollPane(new GistogrammPanel(s, d));
+        gistogrammPane = new JScrollPane(new Gistogramm(s, d));
         gistogrammPane.setBorder(null);
         gistogrammPane.setFocusable(false);
         add(gistogrammPane).setBounds(Constants.Sizes.GISTOGRAMM_BOUNDS);

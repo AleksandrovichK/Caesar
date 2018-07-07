@@ -6,11 +6,11 @@ import javax.swing.*;
 
 import Constants.Constants;
 
-public class GistogrammPanel extends JPanel {
+public class Gistogramm extends JPanel {
     private String[] info;
     private String[] data;
 
-    public GistogrammPanel(String[] s, String[] d) {
+    public Gistogramm(String[] s, String[] d) {
         info = s;
         data = d;
     }
