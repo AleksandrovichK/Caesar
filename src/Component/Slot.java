@@ -1,12 +1,13 @@
 package Component;
 
-import Constants.Constants;
-
-import javax.imageio.ImageIO;
-import javax.swing.*;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
+
+import javax.imageio.ImageIO;
+import javax.swing.*;
+
+import Constants.Constants;
 
 public class Slot extends JPanel {
     private String name;
@@ -31,17 +32,13 @@ public class Slot extends JPanel {
 
         gg.setPaint(Color.WHITE);
         gg.setFont(Constants.Fonts.SLOT_FONT);
-        gg.drawString(name, (this.getWidth() - gg.getFontMetrics().stringWidth(name)) / 2, this.getHeight()-10);
+        gg.drawString(name, (this.getWidth() - gg.getFontMetrics().stringWidth(name)) / 2, this.getHeight() - 10);
 
         try {
-            gg.drawImage(ImageIO.read(new File("src/Component/images/"+name+".png")), this.getWidth()/4, this.getHeight()/10, null);
+            gg.drawImage(ImageIO.read(new File("src/Component/images/" + name + ".png")), this.getWidth() / 4, this.getHeight() / 10, null);
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    boolean isPanelVisible() {
-        return panel.isVisible();
     }
 
     void setPanelVisible(boolean visible) {

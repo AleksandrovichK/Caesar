@@ -1,244 +1,186 @@
 package Panels;
-//123456789ABCDEFGHIJKLMNOPQRSTU
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.HeadlessException;
-import java.awt.event.*;
 
-import javax.swing.JButton;
-import javax.swing.JComponent;
-import javax.swing.JPanel;
-import javax.swing.JTextArea;
-import javax.swing.JTextField;
+import java.awt.*;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
-import Buttons.JBlackButton;
-import Buttons.KeyButton;
-import Main.MainFrame;
+import javax.swing.*;
+
+import Constants.Constants;
+import JBlack.JBlackButton;
+import JBlack.JBlackField;
 
 public class PermutationPanel extends JPanel {
+    private JTextArea primaryText;
+    private int oldest = 0;
+    private int newest = 0;
 
+    public PermutationPanel(JTextArea mainText) {
+        this.setLayout(null);
 
-	private JTextArea primaryText = new JTextArea();
-	private JBlackButton butChange = new JBlackButton("Поменять");
-	private JTextField labelOld = new JTextField();
-	private JTextField labelNew = new JTextField();
-	private JTextField keyInput = new JTextField("");
-	private KeyButton keyButton = new KeyButton();
+        this.setBackground(Constants.Colors.MAIN_COLOR);
 
-	int oldest =0,newest =0;
+        JBlackButton startButton = new JBlackButton(Constants.Buttons.BUTTON_START);
+        add(startButton).setBounds(Constants.Sizes.BUTTON_PERMUTATION_START_BOUNDS);
+        startButton.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
 
-	Listener listener = new Listener();
-	Listener2 listener2 = new Listener2();
-	MainFrame MText;
+            }
 
-	private void addComponent(JComponent component, int x1, int y1, int x2, int y2) {
-		component.setBounds(x1, y1, x2, y2);
-		this.add(component);
-	}
-	private void settings() {
-		this.setLayout(null);
-		primaryText.setFont(new Font("Consolas", Font.BOLD, 18));
-		primaryText.setForeground(Color.BLACK);
-		labelNew.setFont(new Font("Consolas", Font.BOLD, 18));
-		labelNew.setForeground(Color.BLACK);
-		labelOld.setFont(new Font("Consolas", Font.BOLD, 18));
-		labelOld.setForeground(Color.BLACK);
-		keyInput.setFont(new Font("Consolas", Font.BOLD, 18));
-		keyInput.setForeground(Color.BLACK);
+            @Override
+            public void mousePressed(MouseEvent e) {
 
-		primaryText.setText(MText.getTextArea());
-	}
-	public PermutationPanel(MainFrame mainText) throws HeadlessException {
-		MText = mainText;
-		settings();
+            }
 
-		addComponent(primaryText, 10, 17, 304, 355);
-		addComponent(butChange, 340, 37, 110, 20);
-		addComponent(labelOld, 340, 15, 50, 20);
-		addComponent(labelNew, 400, 15, 50, 20);
-		addComponent(keyInput, 10, 375, 304, 20);
-		addComponent(keyButton,320, 375, 40, 20);
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                JLabel rulerLabel = new JLabel();
+                rulerLabel.setFont(Constants.Fonts.RULER_FONT);
+                rulerLabel.setText("123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+                rulerLabel.setForeground(Constants.Colors.GISTOGRAMM_COLOR);
+                add(rulerLabel).setBounds(Constants.Sizes.LABEL_RULER_BOUNDS);
 
+                primaryText.setText(mainText.getText());
+            }
 
-		butChange.addMouseListener(listener);
-		keyButton.addMouseListener(listener2);
-		this.setVisible(true);
-	}
+            @Override
+            public void mouseEntered(MouseEvent e) {
 
-	private int toCountKey(StringBuffer textSB) {
-		int key = 0;
+            }
 
-		for (int i = 0; i < textSB.length(); i++)
-			if (textSB.charAt(i) == '\n') {
-				key = i;
-				break;
-			}
+            @Override
+            public void mouseExited(MouseEvent e) {
 
-		if (key == 0)
-			key = textSB.length();
-		return key;
-	}
-	private void toChangeTwoColumns() {
-		String gettedOld = labelOld.getText().toUpperCase();
-		String gettedNew = labelNew.getText().toUpperCase();
-        toCalibrate(gettedOld,gettedNew);
+            }
+        });
 
-		String text = primaryText.getText();
-		StringBuffer textSB = new StringBuffer(text);
-		int key = toCountKey(textSB);
+        primaryText = new JTextArea();
+        primaryText.setFont(Constants.Fonts.RULER_FONT);
+        primaryText.setForeground(Color.WHITE);
+        primaryText.setBackground(Constants.Colors.MAIN_TEXTPANEL_COLOR);
 
-		toSwap(textSB, oldest, newest, key);
+        JScrollPane textPane = new JScrollPane(primaryText);
+        textPane.setBorder(null);
+        textPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
+        textPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        add(textPane).setBounds(Constants.Sizes.TEXTPANEL_PERMUTATION_BOUNDS);
 
-		text = String.valueOf(textSB);
-		primaryText.setText(text);
-	}
-	private void toSwap(StringBuffer textSB, int oldest, int newest, int key) {
-		oldest--;
-		newest--;
-		for (int i = 0; i < textSB.length() / key; i++) {
-			char temp1 = textSB.charAt(oldest);
-			char temp2 = textSB.charAt(newest);
+        JBlackField oldNumber = new JBlackField(2, false);
+        oldNumber.setFont(Constants.Fonts.FIELD_FONT);
+        add(oldNumber).setBounds(Constants.Sizes.TEXTFIELD_PERMUTATION_OLD_NUMBER_BOUNDS);
 
-			textSB.setCharAt(oldest, temp2);
-			textSB.setCharAt(newest, temp1);
+        JBlackField newNumber = new JBlackField(2, false);
+        newNumber.setFont(Constants.Fonts.FIELD_FONT);
+        add(newNumber).setBounds(Constants.Sizes.TEXTFIELD_PERMUTATION_NEW_NUMBER_BOUNDS);
 
-			oldest = oldest + (key + 1);
-			newest = newest + (key + 1);
+        JBlackButton swapRowsButton = new JBlackButton(Constants.Buttons.BUTTON_SWAP);
+        add(swapRowsButton).setBounds(Constants.Sizes.BUTTON_SWAP_ROWS_BOUNDS);
+        swapRowsButton.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
 
-			if (oldest > textSB.length() && newest > textSB.length())
-				break;
-		}
-	}
-	public class Listener implements MouseListener {
-		@Override
-		public void mouseClicked(MouseEvent e) {
+            }
 
-		}
-		@Override
-		public void mousePressed(MouseEvent e) {
+            @Override
+            public void mousePressed(MouseEvent e) {
 
-		}
-		@Override
-		public void mouseReleased(MouseEvent e) {
-			JButton b = new JButton();
-			b = (JButton) e.getSource();
-			if (b == butChange) {
-				toChangeTwoColumns();
-			}
-		}
-		@Override
-		public void mouseEntered(MouseEvent e) {
+            }
 
-		}
-		@Override
-		public void mouseExited(MouseEvent e) {
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                if (!oldNumber.getText().equals("") && !newNumber.getText().equals("") && !oldNumber.getText().equals("0") && !newNumber.getText()
+                        .equals("0")) {
+                    toChangeTwoColumns(oldNumber.getText(), newNumber.getText());
+                }
+            }
 
-		}
-	}
-	public class Listener2 implements MouseListener {
-		@Override
-		public void mouseClicked(MouseEvent e) {
+            @Override
+            public void mouseEntered(MouseEvent e) {
 
-		}
-		@Override
-		public void mousePressed(MouseEvent e) {
+            }
 
-		}
-		@Override
-		public void mouseReleased(MouseEvent e) {
-			KeyButton c = new KeyButton();
-			c = (KeyButton) e.getSource();
-			if (c == keyButton) {
-				String key = keyInput.getText();
-				toSortAccordingToKey(key);
-			}
-		}
-		@Override
-		public void mouseEntered(MouseEvent e) {
+            @Override
+            public void mouseExited(MouseEvent e) {
 
-		}
-		@Override
-		public void mouseExited(MouseEvent e) {
+            }
+        });
 
-		}
-	}
-	private void toSortAccordingToKey(String key) {
-		key = key.toUpperCase();
-		StringBuffer textKey = new StringBuffer(key);
-		int keyLength = toCountKey(textKey);
+        this.setVisible(true);
+    }
 
-		String text = primaryText.getText();
-		StringBuffer textUS = new StringBuffer(text);
-		StringBuffer readyText = new StringBuffer(text);
-		char temp;
-        int now=0;
-		for (int i=0;i<keyLength;i++){
-             temp=key.charAt(i);
-			 toCalibrate(String.valueOf(0),String.valueOf(temp));
-			 toPlusColumn(textUS, readyText,now, newest,keyLength);
-			 now++;
-		}
+    private int toCountRowLength(StringBuffer textSB) {
+        int rowLength = 0;
 
-		text = String.valueOf(readyText);
-		primaryText.setText(text);
-	}
+        for (int i = 0; i < textSB.length(); i++)
+            if (textSB.charAt(i) == '\n') {
+                rowLength = i;
+                break;
+            }
 
-	private void toPlusColumn(StringBuffer textUS, StringBuffer readyText, int now, int temp, int key) {
-		newest--;
-		for (int i = 0; i < textUS.length() / key; i++) {
-			char temp2 = textUS.charAt(newest);
-			readyText.setCharAt(now, temp2);
+        if (rowLength == 0)
+            rowLength = textSB.length();
+        return rowLength;
+    }
 
-			newest = newest + (key + 1);
-			now = now + (key+ 1);
+    private void toChangeTwoColumns(String oldNum, String newNum) {
+        toCalibrate(oldNum, newNum);
 
-			if (newest > textUS.length() || now>textUS.length())
-				break;
-		}
-	}
+        String text = primaryText.getText();
+        StringBuffer textSB = new StringBuffer(text);
 
-	private void toCalibrate(String gettedOld, String gettedNew){
+        int rowLength = toCountRowLength(textSB);
 
-		if ((int) gettedOld.charAt(0) >= 48 && (int) gettedOld.charAt(0)<= 57 && (int) gettedNew.charAt(0) >= 48 && (int) gettedNew.charAt(0)<= 57)
-		{
-			oldest = Integer.valueOf(gettedOld);
-			newest = Integer.valueOf(gettedNew);
-		}
+        if (oldest <= rowLength + 1 && newest <= rowLength + 1) {
+            toSwap(textSB, rowLength);
+        }
 
-		if (((int) gettedOld.charAt(0) >= 65 && (int) gettedOld.charAt(0)<= 90) && ((int) gettedNew.charAt(0) >= 65 && (int) gettedNew.charAt(0)<= 90))
-		{
-			oldest = ((int) gettedOld.charAt(0)-55);
-			newest = ((int) gettedNew.charAt(0)-55);
-		}
+        primaryText.setText(textSB.toString());
+    }
 
-		if (((int) gettedOld.charAt(0) >= 65 && (int) gettedOld.charAt(0)<= 90) && ((int) gettedNew.charAt(0) >= 48 && (int) gettedNew.charAt(0)<= 57))
-		{
-			oldest = ((int) gettedOld.charAt(0)-55);
-			newest = Integer.valueOf(gettedNew);
-		}
+    private void toSwap(StringBuffer textSB, int key) {
+        oldest--;
+        newest--;
 
-		if (((int) gettedOld.charAt(0) >= 48 && (int) gettedOld.charAt(0)<= 57) && ((int) gettedNew.charAt(0) >= 65 && (int) gettedNew.charAt(0)<= 90))
-		{
-			oldest = Integer.valueOf(gettedOld);
-			newest = ((int) gettedNew.charAt(0)-55);
-		}
-	}
-	public void paint(Graphics g) {
-		Graphics2D gg = (Graphics2D) g;
+        char temp1, temp2;
+        for (int i = 0; i < textSB.length() / key; i++) {
+            temp1 = textSB.charAt(oldest);
+            temp2 = textSB.charAt(newest);
 
-		gg.setFont(new Font("Consolas", Font.BOLD, 18));
-		gg.setPaint(Color.WHITE);
-		gg.drawString("123456789ABCDEFGHIJKLMNOPQRSTU",primaryText.getBounds().x,primaryText.getBounds().y -2);
+            textSB.setCharAt(oldest, temp2);
+            textSB.setCharAt(newest, temp1);
 
-		primaryText.repaint();
-		butChange.repaint();
-		labelOld.repaint();
-		labelNew.repaint();
-        keyInput.repaint();
-		keyButton.repaint();
+            oldest = oldest + (key + 1);
+            newest = newest + (key + 1);
 
-	}
+            if (oldest > textSB.length() && newest > textSB.length())
+                break;
+        }
+    }
 
+    private void toCalibrate(String oldNumber, String newNumber) {
+        if ((int) oldNumber.charAt(0) >= 48 && (int) oldNumber.charAt(0) <= 57 && (int) newNumber.charAt(0) >= 48
+                && (int) newNumber.charAt(0) <= 57) {
+            oldest = Integer.valueOf(oldNumber);
+            newest = Integer.valueOf(newNumber);
+        }
+
+        if (((int) oldNumber.charAt(0) >= 65 && (int) oldNumber.charAt(0) <= 90) && ((int) newNumber.charAt(0) >= 65
+                && (int) newNumber.charAt(0) <= 90)) {
+            oldest = ((int) oldNumber.charAt(0) - 55);
+            newest = ((int) newNumber.charAt(0) - 55);
+        }
+
+        if (((int) oldNumber.charAt(0) >= 65 && (int) oldNumber.charAt(0) <= 90) && ((int) newNumber.charAt(0) >= 48
+                && (int) newNumber.charAt(0) <= 57)) {
+            oldest = ((int) oldNumber.charAt(0) - 55);
+            newest = Integer.valueOf(newNumber);
+        }
+
+        if (((int) oldNumber.charAt(0) >= 48 && (int) oldNumber.charAt(0) <= 57) && ((int) newNumber.charAt(0) >= 65
+                && (int) newNumber.charAt(0) <= 90)) {
+            oldest = Integer.valueOf(oldNumber);
+            newest = ((int) newNumber.charAt(0) - 55);
+        }
+    }
 }

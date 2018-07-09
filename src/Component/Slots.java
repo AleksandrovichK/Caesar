@@ -1,11 +1,12 @@
 package Component;
 
-import Constants.Constants;
-
-import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+
+import javax.swing.*;
+
+import Constants.Constants;
 
 public class Slots extends JPanel {
     private Slot[] slots;
@@ -157,7 +158,7 @@ public class Slots extends JPanel {
         this.setLayout(new GridLayout(names.length, 1));
     }
 
-    private void toInvisibleOthers(int excluding){
+    private void toInvisibleOthers(int excluding) {
         for (int i = 0; i < slots.length; i++) {
             if (i != excluding)
                 slots[i].setPanelVisible(false);

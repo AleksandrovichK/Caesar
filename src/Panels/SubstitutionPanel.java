@@ -10,22 +10,21 @@ import java.util.Map;
 
 import javax.swing.*;
 
-import Buttons.JBlackButton;
-import Component.SubstitutionLetter;
+import Component.Substitution;
 import Constants.Constants;
+import JBlack.JBlackButton;
 
 public class SubstitutionPanel extends JPanel {
-    private JBlackButton startButton;
     private JTextArea textArea;
     private JTextArea mainText;
-    private SubstitutionLetter[] array;
+    private Substitution[] array;
 
     public SubstitutionPanel(JTextArea mText) {
         this.setLayout(null);
         mainText = mText;
         setBackground(Constants.Colors.MAIN_COLOR);
 
-        startButton = new JBlackButton("Start");
+        JBlackButton startButton = new JBlackButton(Constants.Buttons.BUTTON_START);
         add(startButton).setBounds(Constants.Sizes.BUTTON_SUBST_START_BOUNDS);
         startButton.addMouseListener(new MouseListener() {
             @Override
@@ -81,16 +80,16 @@ public class SubstitutionPanel extends JPanel {
             }
 
         if (array != null) {
-            for (SubstitutionLetter arrayIter : array) {
+            for (Substitution arrayIter : array) {
                 this.remove(arrayIter);
             }
         }
 
-        array = new SubstitutionLetter[Frequency.size()];
+        array = new Substitution[Frequency.size()];
 
         int i = 0;
         for (Map.Entry entry : Frequency.entrySet()) {
-            array[i] = new SubstitutionLetter(entry.getKey().toString(), "*");
+            array[i] = new Substitution(entry.getKey().toString(), "*");
             array[i].getSubstitution().addKeyListener(new KeyListener() {
                 @Override
                 public void keyTyped(KeyEvent e) {
@@ -99,7 +98,6 @@ public class SubstitutionPanel extends JPanel {
 
                 @Override
                 public void keyPressed(KeyEvent e) {
-
                 }
 
                 @Override
@@ -113,19 +111,17 @@ public class SubstitutionPanel extends JPanel {
 
         if (array != null) {
             int n;
-            if (array.length < 32) {
+            if (array.length < 21) {
                 n = array.length;
             } else {
-                n = 32;
+                n = 21;
             }
 
-            System.out.println("n = " +n); //TODO FINISH UP THIS SHIT
             for (int j = 0; j < array.length; j++) {
-                array[j].setBounds(Constants.Sizes.TEXTPANEL_SUBST_BOUNDS.x + j % n * Constants.Sizes.LABEL_LETTER_SUBST_BOUNDS.x,
-                                    j / n * 60 + this.getHeight() / 2,
-                                20,
-                                60);
-                System.out.println(   (this.getWidth() - n * 10) / 2 + j % n * 30 +", "+ j / n * 60 + this.getHeight() / 2);
+                array[j].setBounds(Constants.Sizes.TEXTPANEL_SUBST_BOUNDS.x + j % n * (Constants.Sizes.LABEL_LETTER_SUBST_BOUNDS.width + 10),
+                        j / n * 60 + this.getHeight() / 2,
+                        Constants.Sizes.LABEL_LETTER_SUBST_BOUNDS.width,
+                        Constants.Sizes.LABEL_LETTER_SUBST_BOUNDS.height * 2);
             }
 
         }
@@ -138,7 +134,7 @@ public class SubstitutionPanel extends JPanel {
         StringBuilder newText = new StringBuilder();
 
         for (int i = 0; i < startText.length(); i++)
-            for (SubstitutionLetter anArray : array) {
+            for (Substitution anArray : array) {
                 if (!anArray.getSubstitution().getText().isEmpty() && startText.charAt(i) == anArray.getLetter().getText().charAt(0)) {
                     newText.append(anArray.getSubstitution().getText().charAt(0));
                     break;

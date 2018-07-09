@@ -5,9 +5,9 @@ import java.awt.event.MouseListener;
 
 import javax.swing.*;
 
-import Buttons.JBlackButton;
-import Buttons.JBlackField;
 import Constants.Constants;
+import JBlack.JBlackButton;
+import JBlack.JBlackField;
 
 public class EditPanel extends JPanel {
     private JTextArea mainText;
@@ -18,7 +18,7 @@ public class EditPanel extends JPanel {
         this.setLayout(null);
         this.setBackground(Constants.Colors.MAIN_COLOR);
 
-        JBlackField divideColumnTextField = new JBlackField(10);
+        JBlackField divideColumnTextField = new JBlackField(4, true);
 
         JBlackButton upCaseButton = new JBlackButton(Constants.Buttons.BUTTON_UPPER_CASE);
         upCaseButton.addMouseListener(new MouseListener() {
@@ -121,7 +121,6 @@ public class EditPanel extends JPanel {
             @Override
             public void mouseReleased(MouseEvent e) {
                 cleanMainText();
-                //TODO TEXT CLEANING FROM !@#$%^&*()_+
             }
 
             @Override
@@ -183,8 +182,10 @@ public class EditPanel extends JPanel {
                 && c != ')' && c != '-' && c != '_' && c != '+' && c != '=' && c != '/' && c != '\\' && c != '`' && c != '~' && c != '<' && c != '>'
                 && c != ',' && c != '.' && c != '?' && c != ';' && c != ':' && c != ' ' && c != '№' && c != '\n' && c != '0' && c != '1' && c != '2'
                 && c != '3' && c != '4' && c != '5' && c != '6' && c != '7' && c != '8' && c != '9' && c != 'a' && c != 'b' && c != 'c' && c != 'd'
-                && c != 'e' && c != 'f' && c != 'g' && c != 'h' && c != 'i' && c != 'j' && c != 'k' && c != 'l' && c != 'm' && c != 'n' && c != 'o' && c != 'p'
-                && c != 'q' && c != 'r' && c != 's' && c != 't' && c != 'u' && c != 'v' && c != 'w' && c != 'x' && c != 'y' && c != 'z' && c != '—' && c != '['
-                && c != ']' && c != '{' && c != '}' && c != '–' && c != '\t' && c!='»' && c!='«';
+                && c != 'e' && c != 'f' && c != 'g' && c != 'h' && c != 'i' && c != 'j' && c != 'k' && c != 'l' && c != 'm' && c != 'n' && c != 'o'
+                && c != 'p'
+                && c != 'q' && c != 'r' && c != 's' && c != 't' && c != 'u' && c != 'v' && c != 'w' && c != 'x' && c != 'y' && c != 'z' && c != '—'
+                && c != '['
+                && c != ']' && c != '{' && c != '}' && c != '–' && c != '\t' && c != '»' && c != '«' && c != '|';
     }
 }

@@ -8,9 +8,9 @@ import java.util.Map;
 
 import javax.swing.*;
 
-import Buttons.JBlackButton;
 import Component.Gistogramm;
 import Constants.Constants;
+import JBlack.JBlackButton;
 
 public class FrequencyFunctionPanel extends JPanel {
     private JTextArea mainText;
@@ -56,14 +56,15 @@ public class FrequencyFunctionPanel extends JPanel {
 
     private void toBuildFrequencyGistogrammPane() {
         String text = mainText.getText();
-        if (mainText.getText().isEmpty()) return;
+        if (mainText.getText().isEmpty())
+            return;
 
         text = text.replaceAll(" ", "_");
 
         Integer value;
         Map<Character, Integer> Frequency = new HashMap<>();
 
-        for (int i = 0; i < text.length(); i++){
+        for (int i = 0; i < text.length(); i++) {
             Frequency.put(text.charAt(i), 0);
         }
 
@@ -80,7 +81,6 @@ public class FrequencyFunctionPanel extends JPanel {
         } else {
             data = new String[Frequency.size()][3];
         }
-
 
         int j = 0;
         for (Map.Entry entry : Frequency.entrySet()) {

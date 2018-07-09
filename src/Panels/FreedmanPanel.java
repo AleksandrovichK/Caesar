@@ -9,8 +9,8 @@ import java.util.Map;
 import javax.swing.*;
 import javax.swing.border.MatteBorder;
 
-import Buttons.JBlackButton;
 import Constants.Constants;
+import JBlack.JBlackButton;
 
 public class FreedmanPanel extends JPanel {
     private JTextArea mainText;
@@ -31,7 +31,7 @@ public class FreedmanPanel extends JPanel {
 
         JScrollPane textPane = new JScrollPane(textMutualCoincidence);
         textPane.setBorder(null);
-        textPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED );
+        textPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
         textPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
         add(textPane).setBounds(Constants.Sizes.TEXTPANEL_MUTUALFRIEDMAN_BOUNDS);
 
@@ -88,8 +88,8 @@ public class FreedmanPanel extends JPanel {
 
             @Override
             public void mouseReleased(MouseEvent e) {
-                if (!textMutualCoincidence.getText().equals("")){
-                toCountMutFreedman(textMutualCoincidence.getText());
+                if (!textMutualCoincidence.getText().equals("")) {
+                    toCountMutFreedman(textMutualCoincidence.getText());
                 }
             }
 
@@ -105,15 +105,15 @@ public class FreedmanPanel extends JPanel {
         });
         add(mutualCoincidenceButton).setBounds(Constants.Sizes.BUTTON_MUTUAL_COINCIDENCE_BOUNDS);
 
-        JLabel allLanguagesIndex = new JLabel(Constants.Buttons.BUTTON_FREEDMAN+" for languages:");
+        JLabel allLanguagesIndex = new JLabel(Constants.Buttons.BUTTON_FREEDMAN + " for languages:");
         allLanguagesIndex.setForeground(Color.WHITE);
         add(allLanguagesIndex).setBounds(Constants.Sizes.LABEL_FRIEDMAN_BOUNDS);
 
-        JLabel rusMutualIndex = new JLabel(Constants.Buttons.BUTTON_MUTUAL_FRIEDMAN+" for Russian:");
+        JLabel rusMutualIndex = new JLabel(Constants.Buttons.BUTTON_MUTUAL_FRIEDMAN + " for Russian:");
         rusMutualIndex.setForeground(Color.WHITE);
         add(rusMutualIndex).setBounds(Constants.Sizes.LABEL_RUS_MUTUAL_FRIEDMAN_BOUNDS);
 
-        JLabel engMutualIndex = new JLabel(Constants.Buttons.BUTTON_MUTUAL_FRIEDMAN+" for English:");
+        JLabel engMutualIndex = new JLabel(Constants.Buttons.BUTTON_MUTUAL_FRIEDMAN + " for English:");
         engMutualIndex.setForeground(Color.WHITE);
         add(engMutualIndex).setBounds(Constants.Sizes.LABEL_ENG_MUTUAL_FRIEDMAN_BOUNDS);
 
@@ -154,7 +154,8 @@ public class FreedmanPanel extends JPanel {
     }
 
     private void toCountMutFreedman(String text2) {
-        if (mainText.getText().equals("")) return;
+        if (mainText.getText().equals(""))
+            return;
 
         String text = mainText.getText();
 

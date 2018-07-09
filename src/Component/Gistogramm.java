@@ -28,13 +28,13 @@ public class Gistogramm extends JPanel {
         for (int i = 0; i < n; i++) {
             gg.setPaint(Constants.Colors.GISTOGRAMM_COLOR);
             gg.fillRect(i * this.getWidth() / n + 1,
-                    (int) (this.getHeight() - Double.parseDouble(data[i]) * scale * this.getHeight()) -3,
+                    (int) (this.getHeight() - Double.parseDouble(data[i]) * scale * this.getHeight()) - 3,
                     this.getWidth() / n - 3,
                     (int) (Double.parseDouble(data[i]) * scale * this.getHeight()));
 
             gg.setPaint(Color.BLACK);
             gg.drawRect(i * this.getWidth() / n + 1,
-                    (int) (this.getHeight() - Double.parseDouble(data[i]) * scale * this.getHeight()) -3,
+                    (int) (this.getHeight() - Double.parseDouble(data[i]) * scale * this.getHeight()) - 3,
                     this.getWidth() / n - 3,
                     (int) (Double.parseDouble(data[i]) * scale * this.getHeight()));
 
