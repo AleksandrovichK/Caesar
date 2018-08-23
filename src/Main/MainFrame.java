@@ -22,7 +22,7 @@ class MainFrame extends JFrame {
 
     MainFrame() {
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        this.setTitle("Caesar 2.0");
+        this.setTitle("Caesar 2.1");
         this.setBounds(Constants.Sizes.MAINFRAME_INDENT_X, Constants.Sizes.MAINFRAME_INDENT_Y, Constants.Sizes.MAINFRAME_SIZE_X, Constants.Sizes.MAINFRAME_SIZE_Y);
         this.setLayout(null);
 
