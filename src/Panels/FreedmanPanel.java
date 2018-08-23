@@ -165,12 +165,12 @@ public class FreedmanPanel extends JPanel {
         text = text.toUpperCase();
         text2 = text2.toUpperCase();
 
-        for (int i = 0; i < text.length(); i++)
+           for (int i = 0; i < text.length(); i++)
             if ((int) text.charAt(i) != 10 && (int) text.charAt(i) != 13) {
                 Frequency.put(text.charAt(i), 0);
             }
         for (int i = 0; i < text2.length(); i++)
-            if ((int) text.charAt(i) != 10 && (int) text.charAt(i) != 13) {
+            if ((int) text2.charAt(i) != 10 && (int) text2.charAt(i) != 13) {
                 Frequency2.put(text2.charAt(i), 0);
             }
         for (int i = 0; i < text.length(); i++) {
@@ -181,7 +181,7 @@ public class FreedmanPanel extends JPanel {
         }
 
         for (int i = 0; i < text2.length(); i++) {
-            if ((int) text.charAt(i) != 10 && (int) text.charAt(i) != 13) {
+            if ((int) text2.charAt(i) != 10 && (int) text2.charAt(i) != 13) {
                 Integer value2 = Frequency2.get(text2.charAt(i));
                 Frequency2.put(text2.charAt(i), ++value2);
             }
